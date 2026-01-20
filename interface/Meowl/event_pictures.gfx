@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_Meowl_events_01"
+		texturefile = "gfx/event_pictures/North_America/United_States/Meowl_events_01.png"
+	}
+}
+

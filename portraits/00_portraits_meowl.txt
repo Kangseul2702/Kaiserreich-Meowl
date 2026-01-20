@@ -1,0 +1,21 @@
+### German generic portrait set
+
+MEO = {
+	army = {
+		male = {
+			"GFX_portrait_generic_meowl"
+		}
+		female = {
+			"GFX_portrait_generic_meowl"
+		}
+	}
+
+	navy = {
+		male = {
+			"GFX_portrait_generic_meowl_navy"
+		}
+		female = {
+			"GFX_portrait_generic_meowl_navy"
+		}
+	}
+}

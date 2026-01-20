@@ -1,0 +1,333 @@
+characters = {
+	MEO_meowl = {
+		name = MEO_meowl
+		portraits = {
+			civilian = {
+				large = GFX_portrait_MEO_Meowl_civilian_large
+				small = GFX_portrait_MEO_Meowl_civilian_small
+			}
+		}
+		country_leader = {
+			desc = MEO_meowl_leader_desc
+			ideology = social_conservative_subtype
+		}
+		country_leader = {
+			desc = MEO_meowl_leader_desc
+			ideology = authoritarian_democrat_subtype
+		}
+		country_leader = {
+			desc = MEO_meowl_leader_desc
+			ideology = paternal_autocrat_subtype
+		}
+		country_leader = {
+			desc = MEO_meowl_leader_desc
+			ideology = national_populist_subtype
+		}
+	}
+	MEO_angry_meowl = {
+		name = MEO_angry_meowl
+		portraits = {
+			civilian = {
+				large = GFX_portrait_MEO_angry_meowl_civilian_large
+				small = GFX_portrait_MEO_angry_meowl_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MEO_angry_meowl_advisor
+			traits = { KR_flamboyant_brute KR_war_propagandist }
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MEO_angry_meowl_army_chief
+			traits = { KR_army_chief_offensive_1 }
+			cost = 50
+		}
+		field_marshal = {
+			traits = { harsh_leader offensive_doctrine }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+	MEO_surprised_meowl = {
+		name = MEO_surprised_meowl
+		portraits = {
+			civilian = {
+				small = GFX_portrait_MEO_surprised_meowl_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MEO_surprised_meowl_advisor
+			traits = { KR_public_works_administrator }
+		}
+	}
+	MEO_happy_meowl = {
+		name = MEO_happy_meowl
+		portraits = {
+			civilian = {
+				small = GFX_portrait_MEO_happy_meowl_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MEO_happy_meowl_advisor
+			traits = { KR_happy_amateur }
+		}
+	}
+	MEO_bigwig_meowl = {
+		name = MEO_bigwig_meowl
+		portraits = {
+			civilian = {
+				small = GFX_portrait_MEO_bigwig_meowl_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MEO_bigwig_meowl_advisor
+			traits = { KR_popular_figurehead KR_media_magnate }
+		}
+	}
+	MEO_businessman_meowl = {
+		name = MEO_businessman_meowl
+		portraits = {
+			civilian = {
+				small = GFX_portrait_MEO_businessman_meowl_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MEO_businessman_meowl_advisor
+			traits = { KR_influential_intellectual }
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MEO_businessman_meowl_army_chief
+			traits = { KR_army_chief_reform_2 }
+			cost = 100
+		}
+	}
+	MEO_peasant_meowl = {
+		name = MEO_peasant_meowl
+		portraits = {
+			civilian = {
+				small = GFX_portrait_MEO_peasant_meowl_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MEO_peasant_meowl_advisor
+			traits = { KR_agrarian_expert }
+		}
+	}
+	MEO_doctor_meowl = {
+		name = MEO_doctor_meowl
+		portraits = {
+			civilian = {
+				small = GFX_portrait_MEO_doctor_meowl_civilian_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = MEO_doctor_meowl_advisor
+			traits = { KR_medical_expert }
+		}
+	}
+	MEO_spy_meowl = {
+		instance = {
+			allowed = { has_dlc_lar = yes }
+			name = MEO_spy_meowl
+			portraits = {
+				civilian = {
+					small = GFX_portrait_MEO_spy_meowl_civilian_small
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = MEO_spy_meowl_advisor
+				available = {
+					has_intelligence_agency = yes
+				}
+				traits = { KR_head_of_intelligence }
+			}
+		}
+		instance = {
+			allowed = { has_dlc_lar = no }
+			name = MEO_spy_meowl
+			portraits = {
+				civilian = {
+					small = GFX_portrait_MEO_spy_meowl_civilian_small
+				}
+			}
+			advisor = {
+				slot = political_advisor
+				idea_token = MEO_spy_meowl_advisor
+				traits = { KR_secret_police_chief }
+			}
+		}
+	}
+	MEO_viking_meowl = {
+		name = MEO_viking_meowl
+		portraits = {
+			civilian = {
+				large = GFX_portrait_MEO_viking_meowl_civilian_large
+				small = GFX_portrait_MEO_viking_meowl_civilian_small
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MEO_viking_meowl_army_chief
+			traits = { KR_army_chief_morale_1 }
+			cost = 50
+		}
+		corps_commander = {
+			traits = { }
+			skill = 2
+			attack_skill = 3
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	MEO_french_army_meowl = {
+		name = MEO_french_army_meowl
+		portraits = {
+			civilian = {
+				large = GFX_portrait_MEO_french_army_meowl_civilian_large
+				small = GFX_portrait_MEO_french_army_meowl_civilian_small
+			}
+		}
+		advisor = {
+			slot = theorist
+			idea_token = MEO_french_army_meowl_theorist
+			ledger = army
+			traits = { KR_superior_firepower_expert KR_council_of_theorists }
+			cost = 150
+		}
+		corps_commander = {
+			traits = { career_officer brilliant_strategist infantry_officer infantry_leader }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 3
+			logistics_skill = 3
+		}
+	}
+	MEO_cabbit = {
+		name = MEO_cabbit
+		portraits = {
+			civilian = {
+				large = GFX_portrait_MEO_Cabbit_civilian_large
+				small = GFX_portrait_MEO_Cabbit_civilian_small
+			}
+		}
+		country_leader = {
+			desc = MEO_cabbit_leader_desc
+			ideology = totalist_subtype
+		}
+		country_leader = {
+			desc = MEO_cabbit_leader_desc
+			ideology = syndicalist_subtype
+		}
+		country_leader = {
+			desc = MEO_cabbit_leader_desc
+			ideology = radical_socialist_subtype
+		}
+		country_leader = {
+			desc = MEO_cabbit_leader_desc
+			ideology = social_democrat_subtype
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = MEO_cabbit_sic
+			traits = { KR_silent_workhorse_sic }
+			cost = 0
+			can_be_fired = no
+		}
+	}
+	MEO_general_meowl_1 = {
+		name = MEO_general_meowl
+		portraits = {
+			civilian = {
+				large = GFX_portrait_generic_meowl
+				small = GFX_portrait_generic_meowl_small
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	MEO_general_meowl_2 = {
+		name = MEO_general_meowl
+		portraits = {
+			civilian = {
+				large = GFX_portrait_generic_meowl
+				small = GFX_portrait_generic_meowl_small
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	MEO_general_meowl_3 = {
+		name = MEO_general_meowl
+		portraits = {
+			civilian = {
+				large = GFX_portrait_generic_meowl
+				small = GFX_portrait_generic_meowl_small
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	MEO_general_meowl_4 = {
+		name = MEO_general_meowl
+		portraits = {
+			civilian = {
+				large = GFX_portrait_generic_meowl
+				small = GFX_portrait_generic_meowl_small
+			}
+		}
+		corps_commander = {
+			traits = { }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	NKR_navy_advisor = {
+		name = NKR_navy_advisor
+		portraits = {
+			civilian = {
+				small = GFX_portrait_NKR_navy_advisor_small
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = NKR_navy_advisor_navy_chief
+			traits = { KR_navy_chief_decisive_battle_2 }
+			cost = 100
+		}
+	}
+}

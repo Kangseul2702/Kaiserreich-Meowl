@@ -1,0 +1,201 @@
+capital = 386
+set_research_slots = 4
+set_convoys = 100
+set_stability = 0.5
+set_war_support = 0.5
+
+USA_starting_techs = yes
+
+set_politics = {
+	ruling_party = paternal_autocrat
+	last_election = "1936.11.05"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	totalist = 6
+	syndicalist = 10
+	radical_socialist = 7
+	social_democrat = 14
+	social_liberal = 5
+	market_liberal = 6
+	social_conservative = 13
+	authoritarian_democrat = 6
+	paternal_autocrat = 32
+	national_populist = 1
+}
+
+add_ai_strategy = {
+	type = ignore_claim
+	id = "USA"
+	value = 1
+}
+add_ai_strategy = {
+	type = ignore_claim
+	id = "WCA"
+	value = 1
+}
+add_ai_strategy = {
+	type = ignore_claim
+	id = "APG"
+	value = 1
+}
+add_ai_strategy = {
+	type = ignore_claim
+	id = "NEE"
+	value = 1
+}
+add_ai_strategy = {
+	type = ignore_claim
+	id = "ACC"
+	value = 1
+}
+## 지도자 ##
+recruit_character = MEO_meowl
+recruit_character = MEO_cabbit
+
+## 정치고문 ##
+recruit_character = MEO_angry_meowl # 군사 참모, 원수 겸임
+recruit_character = MEO_surprised_meowl
+recruit_character = MEO_spy_meowl
+recruit_character = MEO_happy_meowl
+recruit_character = MEO_bigwig_meowl
+recruit_character = MEO_businessman_meowl # 군사 참모도 겸임
+recruit_character = MEO_peasant_meowl
+recruit_character = MEO_doctor_meowl
+
+## 육군 참모 ##
+recruit_character = MEO_viking_meowl # 장군 겸임
+
+## 해군 참모 ##
+recruit_character = NKR_navy_advisor
+
+## 군사 이론사 ##
+recruit_character = MEO_french_army_meowl
+
+## 장군 ## 
+recruit_character = MEO_general_meowl_1
+recruit_character = MEO_general_meowl_2
+recruit_character = MEO_general_meowl_3
+recruit_character = MEO_general_meowl_4
+
+
+activate_advisor = MEO_cabbit_sic
+
+### 더미 지도자 ###
+create_country_leader = {
+	name = USA_joe_biden
+	picture = "gfx/leaders/MEO/USA_joe_biden.png"
+	ideology = social_liberal_subtype
+}
+create_country_leader = {
+	name = USA_donald_trump
+	picture = "gfx/leaders/MEO/USA_donald_trump.png"
+	ideology = market_liberal_subtype
+}
+
+#### Templates ###
+#division_template = {
+#	name = "Infantry Division"
+#	division_names_group = USA_INF_01
+#	regiments = {
+#		infantry = { x = 0 y = 0 }
+#		infantry = { x = 0 y = 1 }
+#		infantry = { x = 0 y = 2 }
+#		infantry = { x = 1 y = 0 }
+#		infantry = { x = 1 y = 1 }
+#		infantry = { x = 1 y = 2 }
+#		infantry = { x = 2 y = 0 }
+#		infantry = { x = 2 y = 1 }
+#		infantry = { x = 2 y = 2 }
+#	}
+#	support = {
+#		artillery = { x = 0 y = 0 }
+#		engineer = { x = 0 y = 1 }
+#	}
+#	template_counter = 6
+#}
+#division_template = {
+#	name = "National Guard Infantry Division"
+#	division_names_group = USA_GAR_01
+#	regiments = {
+#		infantry = { x = 0 y = 0 }
+#		infantry = { x = 0 y = 1 }
+#		infantry = { x = 0 y = 2 }
+#		infantry = { x = 1 y = 0 }
+#		infantry = { x = 1 y = 1 }
+#		infantry = { x = 1 y = 2 }
+#		infantry = { x = 2 y = 0 }
+#		infantry = { x = 2 y = 1 }
+#		infantry = { x = 2 y = 2 }
+#	}
+#	support = {
+#		artillery = { x = 0 y = 0 }
+#	}
+#	template_counter = 68
+#}
+#division_template = {
+#	name = "Cavalry Division"
+#	division_names_group = USA_CAV_01
+#	regiments = {
+#		cavalry = { x = 0 y = 0 }
+#		cavalry = { x = 0 y = 1 }
+#		cavalry = { x = 0 y = 2 }
+#		cavalry = { x = 1 y = 0 }
+#		cavalry = { x = 1 y = 1 }
+#		cavalry = { x = 1 y = 2 }
+#		cavalry = { x = 2 y = 0 }
+#		cavalry = { x = 2 y = 1 }
+#		cavalry = { x = 2 y = 2 }
+#	}
+#	support = {
+#		light_tank_recon = { x = 0 y = 0 }
+#		engineer = { x = 0 y = 1 }
+#	}
+#}
+#division_template = {
+#	name = "National Guard Cavalry Division"
+#	division_names_group = USA_CAV_01
+#	regiments = {
+#		cavalry = { x = 0 y = 0 }
+#		cavalry = { x = 0 y = 1 }
+#		cavalry = { x = 0 y = 2 }
+#		cavalry = { x = 0 y = 3 }
+#		cavalry = { x = 1 y = 0 }
+#		cavalry = { x = 1 y = 1 }
+#		cavalry = { x = 1 y = 2 }
+#		cavalry = { x = 1 y = 3 }
+#	}
+#}
+#division_template = {
+#	name = "Armored Cavalry Division"
+#	division_names_group = USA_ARM_01
+#	regiments = {
+#		motorized = { x = 0 y = 0 }
+#		motorized = { x = 0 y = 1 }
+#		motorized = { x = 0 y = 2 }
+#		mot_artillery_brigade = { x = 1 y = 0 }
+#		mot_artillery_brigade = { x = 1 y = 1 }
+#		mot_artillery_brigade = { x = 1 y = 2 }
+#		light_armor = { x = 2 y = 0 }
+#		light_armor = { x = 2 y = 1 }
+#		light_armor = { x = 2 y = 2 }
+#	}
+#	priority = 2
+#}
+#division_template = {
+#	name = "Marine Division"
+#	division_names_group = USA_MAR_01
+#	regiments = {
+#		marine = { x = 0 y = 0 }
+#		marine = { x = 0 y = 1 }
+#		marine = { x = 0 y = 2 }
+#		marine = { x = 1 y = 0 }
+#	}
+#	support = {
+#		engineer = { x = 0 y = 0 }
+#	}
+#	priority = 2
+#}
+#

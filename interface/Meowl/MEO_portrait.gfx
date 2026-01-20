@@ -1,0 +1,100 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_portrait_MEO_Meowl_civilian_large"
+		texturefile = "gfx/leaders/MEO/MEO_Meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_Cabbit_civilian_large"
+		texturefile = "gfx/leaders/MEO/MEO_Cabbit.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_angry_meowl_civilian_large"
+		texturefile = "gfx/leaders/MEO/MEO_angry_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_viking_meowl_civilian_large"
+		texturefile = "gfx/leaders/MEO/MEO_viking_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_french_army_meowl_civilian_large"
+		texturefile = "gfx/leaders/MEO/MEO_french_army_meowl.png"
+	}
+
+	# advisors
+	spriteType = {
+		name = "GFX_portrait_MEO_Meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/advisor_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_Cabbit_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/advisor_cabbit.png"
+	}
+	
+	spriteType = {
+		name = "GFX_portrait_MEO_surprised_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/advisor_surprised_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_angry_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/advisor_angry_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_happy_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_happy_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_bigwig_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_bigwig_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_spy_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_spy_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_businessman_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_businessman_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_peasant_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_peasant_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_viking_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_viking_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_french_army_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_french_army_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_doctor_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_doctor_meowl.png"
+	}
+
+	
+	spriteType = {
+		name = "GFX_portrait_NKR_navy_advisor_small"
+		texturefile = "gfx/interface/advisors/MEO/NKR_navy_advisor.png"
+	}
+
+
+	#generic
+	spriteType = {
+		name = "GFX_portrait_generic_meowl"
+		texturefile = "gfx/leaders/MEO/generic_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_generic_meowl_small"
+		texturefile = "gfx/interface/advisors/MEO/advisor_generic_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_generic_meowl_navy"
+		texturefile = "gfx/leaders/MEO/generic_meowl_navy.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_generic_meowl_navy_small"
+		texturefile = "gfx/interface/advisors/MEO/advisor_generic_navy_meowl.png"
+	}
+
+}
+
