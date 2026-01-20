@@ -9,4 +9,4 @@ dependencies={
 }
 name="Kaiserreich Meowl"
 supported_version="1.17.3.0"
-path="mod/Kaierreich-Mewol"
+path="mod/Kaiserreich-Meowl"
