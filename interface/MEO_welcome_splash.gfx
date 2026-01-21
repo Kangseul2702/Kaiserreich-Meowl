@@ -1,0 +1,7 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_MEO_intro"
+		texturefile = "gfx/introscreen/MEO_intro.png"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+}
