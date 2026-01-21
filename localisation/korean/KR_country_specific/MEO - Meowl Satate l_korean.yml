@@ -1,4 +1,8 @@
 ﻿l_korean:
+ MEO_KR_gathering_storm_desc: "1936년, 대공황의 긴 그림자가 미합중국을 집어삼켰습니다. 경제적 절망은 정치적 양극화를 불러왔고, 워싱턴의 권위가 추락한 틈을 타 잭 리드와 휴이 롱, 맥아더 장군의 야망이 위태롭게 충돌하고 있습니다. 그러나 이 혼란의 소용돌이 속, 시애틀의 짙은 안개 너머에서 전례 없는 '제3의 물결'이 당도했습니다. 기성 정치와 낡은 이념을 모두 '오래된 영혼(Old Souls)'들의 실패로 규정한 수수께끼의 지도자, '먀울'이 모습을 드러낸 것입니다.\n\n그는 자본주의의 탐욕과 사회주의의 투쟁 모두를 거부하며, 인류의 완전한 '재탄생'을 주창합니다. 시애틀 항구에서 시작된 이 기이한 변혁의 바람은 이제 대륙 전체를 위협하는 태풍으로 변모했습니다. 기존의 질서가 붕괴하고 내전의 전운이 감도는 지금, '새로운 영혼'들은 낡은 세계를 무너뜨리고 그들만의 기이한 유토피아를 건설할 갈림길에 서 있습니다..."
+ meowl_focus: "새로운 영혼 중점 트리"
+
+### Parties ###
  MEO_totalist_party: "C.A.B.B.I.T"
  MEO_totalist_party_long: "제국주의 폭정을 타파하는 계급 행동국\n(Class Action Bureau Bashing Imperialist Tyranny)"
  MEO_syndicalist_party: "C.A.B.B.I.T"
@@ -19,27 +23,14 @@
  MEO_paternal_autocrat_party_long: "새로운 영혼들"
  MEO_national_populist_party: "새로운 영혼들"
  MEO_national_populist_party_long: "새로운 영혼들"
- MEO: "새로운 영혼"
- MEO_ADJ: "새로운 영혼"
- MEO_DEF: "새로운 영혼"
- MEO_totalist: "새로운 영혼"
- MEO_totalist_DEF: "새로운 영혼"
- MEO_syndicalist: "새로운 영혼"
- MEO_syndicalist_DEF: "새로운 영혼"
- MEO_radical_socialist: "새로운 영혼"
- MEO_radical_socialist_DEF: "새로운 영혼"
- MEO_social_democrat: "새로운 영혼"
- MEO_social_democrat_DEF: "새로운 영혼"
- MEO_social_liberal: "새로운 영혼"
- MEO_social_liberal_DEF: "새로운 영혼"
- MEO_market_liberal: "새로운 영혼"
- MEO_market_liberal_DEF: "새로운 영혼"
- MEO_national_populist: "새로운 영혼"
- MEO_national_populist_DEF: "새로운 영혼"
+
+### Leaders ###
  MEO_meowl: "먀울"
  MEO_meowl_leader_desc: "§Y출생:§! §L2013년 4월 28일 중화인민공화국 웨이보§!\n§Y이력:§! §L1936년 미국은 대공황의 늪에서 허우적거리고 있었습니다. 경제적 절망은 정치적 극단주의라는 광풍을 불러일으켰습니다. 잭 리드와 휴이 롱, 그리고 맥아더가 충돌하기 직전이었습니다. 바로 그때 시애틀의 안개 낀 항구에 '먀울'이라는 수수께끼의 인물이 나타났습니다.\n\n먀울의 출신은 아무도 명확히 알지 못했습니다. 어떤 이들은 먀울이 전쟁을 피해 도망친 동유럽의 망명 시인이라 했습니다. 또 다른 이들은 샌프란시스코에서 올라온 전위 예술가라고 수군거렸습니다. 먀울은 기존의 낡은 이념들을 단호히 거부했습니다. 자본주의와 사회주의, 권위주의를 모두 '오래된 영혼들(Old Souls)'의 실패라고 규정했습니다.\n\n\"그들은 서로를 죽이는 법만 알고 있습니다. 우리는 이 낯설고 잔혹한 세계에서 다시 태어나야 합니다.\"§!"
  MEO_cabbit: "캐빗"
  MEO_cabbit_leader_desc: "§Y출생:§! §L2019년 12월 7일 인스타그램 koty_vezde §!\n§Y이력:§! §L먀울이 '모든 실수를 저지르며' 전쟁을 치르는 동안, 그 뒤치다꺼리를 도맡았던 인물이 바로 캐빗이었습니다. 내전은 기적적으로 '새로운 영혼'의 승리로 끝났지만, 먀울은 자신이 저지른 실수들로 인해 희생된 사람들에 대한 죄책감을 이기지 못하고 무너졌습니다. 먀울이 눈물을 흘리며 집무실을 떠난 날, 캐빗은 선글라스를 낀 채 그 자리에 앉아 다리를 책상 위에 올렸습니다.\n\n대중들은 캐빗이 먀울을 몰아냈다고 수군대지만, 사실 캐빗은 먀울을 미워하지 않았습니다. 단지 먀울의 '지나친 열정'이 피곤했을 뿐입니다. 먀울이 세운 거대한 '평화의 기념비'를 부수자는 의견이 나왔을 때, 캐빗은 \"부수는 데 돈이 드니까 그냥 놔둬. 비둘기들이 똥 싸기 좋은 장소네.\"라며 쿨하게 넘겼습니다.\n\n\"그는 너무 뜨거워서 타버렸지. 난 차가워서 얼어붙지도 않아.\"§!"
+
+### Advisors ###
  MEO_angry_meowl: "화난 먀울"
  MEO_surprised_meowl: "놀란 먀울"
  MEO_spy_meowl: "스파이 먀울"
@@ -55,7 +46,10 @@
  MEO_chief_of_naval_meowl: "해군참모총장 먀울"
  USA_joe_biden: "조 바이든"
  USA_donald_trump: "도날드 트럼프"
+ MEO_general_meowl: "장군 먀울"
+ NKR_navy_advisor: "김명식(먀울이 되기 직전)"
 
+### Events ###
  meowl_events.1.t: "행복한 먀울!"
  meowl_events.1.d: "먀울의 지도력은 예상 밖의 성과를 거두었습니다. 시애틀을 [ACC.GetName]으로부터 '해방'하는 데 성공한 것입니다. 지금 당장은 내전의 위협에서 벗어나 있습니다. 그러나 평화는 일시적일 뿐입니다. [ACC.GetNameDef]의 군대는 여전히 시애틀을 호시탐탐 노리고 있습니다. 먀울과 그를 따르는 인민들의 안전이 언제까지 지속될지 아무도 장담할 수 없습니다."
  meowl_events.1.a: "그래도 지금은 행복하다네~"
@@ -74,7 +68,24 @@
  meowl_events.4.d: "우리의 야심찬 프로젝트 중 하나인 '새영혼' 프로젝트가 드디어 성공적으로 완수되었습니다. 해군참모총장이 이제 완전한 먀울로 거듭났습니다 이번 성과로 우리는 확신을 얻었습니다. 전 인류를 먀울로 진화시켜 'New Soul'로 승화시킬 수 있다는 가능성이 이제 현실로 다가왔습니다. 새로운 시대의 여명이 밝아오고 있습니다."
  meowl_events.4.a: "축하하네! 그.. 이전 이름이 뭐였더라..? 뭐 아무튼."
  
- # misc
- MEO_general_meowl: "장군 먀울"
- NKR_navy_advisor: "김명식(먀울이 되기 직전)"
+### Tooltips ###
  tooltip_no_meowl: "이 선택지를 고르면 먀울과 관련된 이벤트 체인은 더 이상 발동하지 않습니다."
+
+### Country Names ###
+ MEO: "새로운 영혼"
+ MEO_ADJ: "새로운 영혼"
+ MEO_DEF: "새로운 영혼"
+ MEO_totalist: "새로운 영혼"
+ MEO_totalist_DEF: "새로운 영혼"
+ MEO_syndicalist: "새로운 영혼"
+ MEO_syndicalist_DEF: "새로운 영혼"
+ MEO_radical_socialist: "새로운 영혼"
+ MEO_radical_socialist_DEF: "새로운 영혼"
+ MEO_social_democrat: "새로운 영혼"
+ MEO_social_democrat_DEF: "새로운 영혼"
+ MEO_social_liberal: "새로운 영혼"
+ MEO_social_liberal_DEF: "새로운 영혼"
+ MEO_market_liberal: "새로운 영혼"
+ MEO_market_liberal_DEF: "새로운 영혼"
+ MEO_national_populist: "새로운 영혼"
+ MEO_national_populist_DEF: "새로운 영혼"

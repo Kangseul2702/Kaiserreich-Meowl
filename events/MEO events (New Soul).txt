@@ -69,28 +69,14 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event meowl_events.3 option meowl_events.3.a"
 		name = meowl_events.3.a
-		effect_tooltip = { release =  MEO }
-		hidden_effect = {
-			MEO = { 
-				transfer_state = 386
-				change_tag_from = ACC
-			}
-		}
+		ACC_release_MEO = yes
+		MEO = { change_tag_from = ACC }
 	}
 
 	option = {
 		log = "[GetLogInfo]: event meowl_events.3 option meowl_events.3.a"
 		name = meowl_events.3.b
-		effect_tooltip = { release =  MEO }
-		hidden_effect = {
-			MEO = { transfer_state = 386 }
-		}
-	}
-
-	After = {
-		hidden_effect = { 
-			MEO = { country_event = { id = meowl_events.4 days = 01 } }
-		}
+		ACC_release_MEO = yes
 	}
 }
 
