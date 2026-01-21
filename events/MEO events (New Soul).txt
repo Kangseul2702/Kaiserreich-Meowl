@@ -20,6 +20,65 @@ country_event = {
 }
 
 country_event = {
+	id = meowl_events.2
+	title = meowl_events.2.t
+	desc = meowl_events.2.d
+	picture = GFX_report_event_Meowl_events_01
+
+	trigger = {
+		original_tag = ACC
+		has_global_flag = USA_ACC_existed
+		NOT = { country_exists = MEO }
+	}
+
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event meowl_events.2 option meowl_events.2.a"
+		name = meowl_events.2.a
+		386 = {
+			set_demilitarized_zone = yes
+		}
+	}
+
+	option = {
+		log = "[GetLogInfo]: event meowl_events.2 option meowl_events.2.b"
+		name = meowl_events.2.b
+		ai_chance = { base = 0 }
+		custom_effect_tooltip = tooltip_no_meowl
+	}
+}
+
+country_event = {
+	id = meowl_events.3
+	title = meowl_events.3.t
+	desc = meowl_events.3.d
+	picture = GFX_report_event_Meowl_events_01
+
+	trigger = {
+		original_tag = ACC
+		owns_state = 386
+		has_war = yes 
+		NOT = { country_exists = MEO }
+	}
+
+	fire_only_once = yes
+
+	option = {
+		log = "[GetLogInfo]: event meowl_events.3 option meowl_events.3.a"
+		name = meowl_events.3.a
+		MEO = { transfer_state = 386 }
+		ACC = { change_tag_from = MEO }
+	}
+
+	option = {
+		log = "[GetLogInfo]: event meowl_events.3 option meowl_events.3.a"
+		name = meowl_events.3.b
+		MEO = { transfer_state = 386 }
+	}
+}
+
+country_event = {
 	id = cabbit_events.1
 	title = cabbit_events.1.t
 	desc = cabbit_events.1.d

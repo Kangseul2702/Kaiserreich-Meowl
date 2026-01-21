@@ -29,6 +29,15 @@ spriteTypes = {
 		name = "GFX_portrait_MEO_Cabbit_civilian_small"
 		texturefile = "gfx/interface/advisors/MEO/advisor_cabbit.png"
 	}
+
+	spriteType = {
+		name = "GFX_portrait_MEO_strawberry_elephant_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_strawberry_elephant.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_headbutt_king_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_headbutt_king.png"
+	}
 	
 	spriteType = {
 		name = "GFX_portrait_MEO_surprised_meowl_civilian_small"
@@ -69,6 +78,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_portrait_MEO_doctor_meowl_civilian_small"
 		texturefile = "gfx/interface/advisors/MEO/MEO_doctor_meowl.png"
+	}
+	spriteType = {
+		name = "GFX_portrait_MEO_chief_of_naval_meowl_civilian_small"
+		texturefile = "gfx/interface/advisors/MEO/MEO_chief_of_naval_meowl.png"
 	}
 
 	

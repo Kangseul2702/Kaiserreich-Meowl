@@ -248,6 +248,37 @@ characters = {
 			can_be_fired = no
 		}
 	}
+	MEO_strawberry_elephant = {
+		name = MEO_strawberry_elephant
+		portraits = {
+			civilian = {
+				#large = GFX_portrait_MEO_Cabbit_civilian_large
+				small = GFX_portrait_MEO_strawberry_elephant_small
+			}
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = MEO_strawberry_elephant_sic
+			traits = { KR_pragmatic_intriguer_sic }
+			cost = 0
+			can_be_fired = no
+		}
+	}
+	MEO_headbutt_king = {
+		name = MEO_headbutt_king
+		portraits = {
+			civilian = {
+				#large = GFX_portrait_MEO_Cabbit_civilian_large
+				small = GFX_portrait_MEO_headbutt_king_small
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = MEO_headbutt_king_army_chief
+			traits = { KR_army_breakthrough_2 }
+			cost = 100
+		}
+	}
 	MEO_general_meowl_1 = {
 		name = MEO_general_meowl
 		portraits = {

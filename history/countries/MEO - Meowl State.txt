@@ -64,9 +64,11 @@ recruit_character = MEO_bigwig_meowl
 recruit_character = MEO_businessman_meowl # 군사 참모도 겸임
 recruit_character = MEO_peasant_meowl
 recruit_character = MEO_doctor_meowl
+recruit_character = MEO_strawberry_elephant
 
 ## 육군 참모 ##
 recruit_character = MEO_viking_meowl # 장군 겸임
+recruit_character = MEO_headbutt_king
 
 ## 해군 참모 ##
 recruit_character = NKR_navy_advisor

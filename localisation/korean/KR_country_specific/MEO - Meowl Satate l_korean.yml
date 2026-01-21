@@ -50,13 +50,27 @@
  MEO_viking_meowl: "바이킹 먀울"
  MEO_french_army_meowl: "프랑스 유학 먀울"
  MEO_doctor_meowl: "의사 먀울"
+ MEO_strawberry_elephant: "딸끼리"
+ MEO_headbutt_king: "박치기 고수 먀울"
+ MEO_chief_of_naval_meowl: "해군참모총장 먀울"
  USA_joe_biden: "조 바이든"
  USA_donald_trump: "도날드 트럼프"
 
  meowl_events.1.t: "행복한 먀울!"
  meowl_events.1.d: "먀울의 지도력은 예상 밖의 성과를 거두었습니다. 시애틀을 [ACC.GetName]으로부터 '해방'하는 데 성공한 것입니다. 지금 당장은 내전의 위협에서 벗어나 있습니다. 그러나 평화는 일시적일 뿐입니다. [ACC.GetNameDef]의 군대는 여전히 시애틀을 호시탐탐 노리고 있습니다. 먀울과 그를 따르는 인민들의 안전이 언제까지 지속될지 아무도 장담할 수 없습니다."
  meowl_events.1.a: "그래도 지금은 행복하다네~"
+
+ meowl_events.2.t: "통제불가 상태의 [386.GetCapitalVictoryPointName]!"
+ meowl_events.2.d: "[386.GetCapitalVictoryPointName] 주 정부와 갑자기 연락이 두절되었습니다. 해당 지역의 공직자들 역시 모두 소식이 끊긴 상태입니다. 현재로서는 우리 군대가 그곳에서 철수했다는 사실만을 확인할 수 있을 뿐입니다."
+ meowl_events.2.a: "한 시가 급하니 이 사안은 미뤄두자."
+ meowl_events.2.b: "이런 장난은 그만 둬라."
+
+ meowl_events.3.t: "[386.GetCapitalVictoryPointName]에서 새정부 선포!"
+ meowl_events.3.d: "충격적인 소식입니다. 며칠간 소식이 없던 [386.GetCapitalVictoryPointName]에서 새로운 정부가 수립되었다는 소식이 전해졌습니다. 자체적인 민병대와 고양이의 얼굴과 부엉이의 몸을 가지고 있는 괴생명체가 직접 신 정부 설립을 선언하였습니다. 스스로 '새로운 영혼' '먀울' 이라 선언하였고 기존의 정부와 미합중국을 포함한 여러가지 사상들을 '구 영혼들(old souls)'이라 선언하고 국가의 적이라고 선포했습니다. "
+ meowl_events.3.a: "어쩔수 없군...(새로운 영혼으로 플레이)"
+ meowl_events.3.b: "어쩔수 없군..."
  
  # misc
  MEO_general_meowl: "장군 먀울"
  NKR_navy_advisor: "김명식(먀울이 되기 직전)"
+ tooltip_no_meowl: "이 선택지를 고르면 먀울과 관련된 이벤트 체인은 더 이상 발동하지 않습니다."
