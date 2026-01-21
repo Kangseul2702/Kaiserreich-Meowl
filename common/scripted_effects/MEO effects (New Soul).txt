@@ -41,6 +41,7 @@ ACC_release_MEO = {
 			
 			country_event = { id = meowl_events.1 days = 3 } # Initialization event
 			country_event = { id = meowl_events.4 days = 6 }
+			country_event = { id = meowl_events.5 days = 30 } # Invasion Coming..
 
 			# set_temp_variable = { days_to_event = 1633 }
 			# calculate_days_since_game_start = yes

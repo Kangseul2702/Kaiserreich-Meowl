@@ -1,0 +1,25 @@
+crisis = {
+	MEO_invasion_coming = {
+		icon = generic_inflation
+
+		allowed = { always = no }
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		selectable_mission = no
+		is_good = no
+		days_mission_timeout = 30
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout MEO_invasion_coming"
+			ACC = {
+				declare_war_on = {
+					target = MEO
+					type = civil_war
+				}
+			}
+		}
+		fixed_random_seed = no
+	}
+}
