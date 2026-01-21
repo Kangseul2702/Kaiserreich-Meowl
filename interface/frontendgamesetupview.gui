@@ -924,29 +924,29 @@ guiTypes = {
 			position = { x = 528 y = 325 }
 			# hide = yes
 
-			iconType = {
-				name = feature_highlight_icon_0
-				quadTextureSprite = "GFX_idea_AFG_neutrality_graduates"
-				position = { x = 30  y = 34 }
-				centerPosition = yes
-				pdx_tooltip = feature_highlight_icon_0_tt
-			}
+			# iconType = {
+			# 	name = feature_highlight_icon_0
+			# 	quadTextureSprite = "GFX_idea_AFG_neutrality_graduates"
+			# 	position = { x = 30  y = 34 }
+			# 	centerPosition = yes
+			# 	pdx_tooltip = feature_highlight_icon_0_tt
+			# }
 
 			iconType = {
 				name = feature_highlight_icon_1
 				quadTextureSprite = "GFX_idea_RAJ_federal_court_of_india"
-				position = { x = 84  y = 62 }
+				position = { x = 84  y = 52 }
 				centerPosition = yes
-				pdx_tooltip = feature_highlight_icon_1_tt
+				pdx_tooltip = feature_highlight_icon_meowl_tt
 			}
 
-			iconType = {
-				name = feature_highlight_icon_2
-				quadTextureSprite = "GFX_idea_generic_enigma_machine"
-				position = { x = 138  y = 34 }
-				centerPosition = yes
-				pdx_tooltip = feature_highlight_icon_2_tt
-			}
+			# iconType = {
+			# 	name = feature_highlight_icon_2
+			# 	quadTextureSprite = "GFX_idea_generic_enigma_machine"
+			# 	position = { x = 138  y = 34 }
+			# 	centerPosition = yes
+			# 	pdx_tooltip = feature_highlight_icon_2_tt
+			# }
 		}
 
 		containerWindowType = {

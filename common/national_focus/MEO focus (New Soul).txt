@@ -1,0 +1,40 @@
+######################################################
+# New Soul Focus Tree
+# By Meowl and Cabbit ^^
+######################################################
+
+focus_tree = {
+	id = meowl_focus
+
+	country = {
+		factor = 0
+
+		modifier = {
+			add = 10
+			tag = MEO
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 3000 y = 690 }
+	
+	focus = {
+		id = MEO_birth_of_new_soul
+		icon = GFX_goal_generic_demand_territory
+		cost = 11
+
+		x = 12
+		y = 0
+
+		ai_will_do = { factor = 50 }
+		available = {
+			has_global_flag = USA_MEO_existed
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_birth_of_new_soul"
+			add_political_power = 200
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+}
