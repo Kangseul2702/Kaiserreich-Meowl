@@ -97,7 +97,6 @@ country_event = {
 				civilian = { small = GFX_portrait_MEO_chief_of_naval_meowl_civilian_small }
 			}
 		}
-		
 	}
 }
 

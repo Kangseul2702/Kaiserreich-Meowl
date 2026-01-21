@@ -10,7 +10,7 @@ ACC_release_MEO = {
 			limit = { is_core_of = MEO }
 			transfer_state_to = MEO
 			teleport_armies = {
-				limit = { is_ally_with = USA }
+				limit = { is_ally_with = ACC }
 				to_state_array = owned_controlled_states
 			}
 		}
@@ -36,7 +36,7 @@ ACC_release_MEO = {
 			# 	load_oob = ACW_WCA_air_legacy
 			# }
 
-			WCA_add_extra_units_based_on_strength = yes
+			MEO_spawn_starting_civil_war_divisions = yes
 			unit_limit_calculation_effect = yes
 			
 			country_event = { id = meowl_events.1 days = 3 } # Initialization event
@@ -54,5 +54,120 @@ ACC_release_MEO = {
 		# 	set_temp_variable = { USA_mio_transfer_target = WCA }
 		# 	USA_transfer_mio_size_and_funds = yes
 		# }
+	}
+}
+
+
+MEO_spawn_starting_civil_war_divisions = {
+	create_MEO_militia_template = yes
+	create_MEO_garrison_template = yes
+	create_MEO_mounted_militia_template = yes
+	create_MEO_organised_reserve_template = yes
+	capital_scope = {
+		create_unit = {
+			division = "division_template = \"Meowl Guard\" start_experience_factor = 0.5"
+			owner = PREV
+			count = 5
+		}
+		create_unit = {
+			division = "division_template = \"Continental Line\" start_experience_factor = 0.2"
+			owner = PREV
+			count = 2
+		}
+		create_unit = {
+			division = "division_template = \"Organised Reserve Infantry Division\" start_experience_factor = 0.1"
+			owner = PREV
+			count = 2
+		}
+		create_unit = {
+			division = "division_template = \"Continental Cavalry\" start_experience_factor = 0.2"
+			owner = PREV
+		}
+	}
+}
+
+create_MEO_militia_template = {
+	if = {
+		limit = {
+			NOT = { has_template = "Meowl Guard" }
+		}
+		division_template = {
+			name = "Meowl Guard"
+			division_names_group = USA_GAR_01
+			regiments = {
+				militia = { x = 0 y = 0 }
+				militia = { x = 0 y = 1 }
+				militia = { x = 0 y = 2 }
+				militia = { x = 0 y = 3 }
+				militia = { x = 1 y = 0 }
+			}
+			priority = 0
+		}
+	}
+}
+
+create_MEO_garrison_template = {
+	if = {
+		limit = {
+			NOT = { has_template = "Continental Line" }
+		}
+		division_template = {
+			name = "Continental Line"
+			division_names_group = USA_GAR_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+			}
+			template_counter = 6
+			priority = 0
+		}
+	}
+}
+
+create_MEO_mounted_militia_template = {
+	if = {
+		limit = {
+			NOT = { has_template = "Continental Cavalry" }
+		}
+		division_template = {
+			name = "Continental Cavalry"
+			division_names_group = USA_CAV_01
+			regiments = {
+				cavalry = { x = 0 y = 0 }
+				cavalry = { x = 0 y = 1 }
+				cavalry = { x = 0 y = 2 }
+				cavalry = { x = 1 y = 0 }
+				cavalry = { x = 1 y = 1 }
+				cavalry = { x = 1 y = 2 }
+			}
+		}
+	}
+}
+
+create_MEO_organised_reserve_template = {
+	if ={
+		limit = {
+			NOT = { has_template = "Organised Reserve Infantry Division" }
+		}
+		division_template = {
+			name = "Organised Reserve Infantry Division"
+			division_names_group = USA_INF_01
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				infantry = { x = 2 y = 1 }
+				infantry = { x = 2 y = 2 }
+			}
+			template_counter = 6
+		}
 	}
 }
