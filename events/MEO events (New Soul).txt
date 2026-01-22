@@ -84,7 +84,7 @@ country_event = {
 		hidden_effect = {
 			USA = { country_event = { id = meowl_events.6 days = 01 } }
 			APG = { country_event = { id = meowl_events.6 days = 01 } }
-			ACW = { country_event = { id = meowl_events.6 days = 01 } }
+			WCA = { country_event = { id = meowl_events.6 days = 01 } }
 		}
 	}
 }

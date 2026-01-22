@@ -81,7 +81,7 @@
  meowl_events.4.a: "축하하네! 그.. 이전 이름이 뭐였더라..? 뭐 아무튼."
 
  meowl_events.5.t: "침공 임박!"
- meowl_events.5.d: "$ACC_ACW$이 우리를 침공할 준비를 하고 있습니다. 그들은 우리를 '반란군'으로 규정하고 진압하려 합니다. 우리는 이 위협에 맞서 싸워야 합니다."
+ meowl_events.5.d: "[ACC.GetName]이 우리를 침공할 준비를 하고 있습니다. 그들은 우리를 '반란군'으로 규정하고 진압하려 합니다. 우리는 이 위협에 맞서 싸워야 합니다."
  meowl_events.5.a: "침공을 막아내겠다!"
 
  meowl_events.6.t: "[386.GetCapitalVictoryPointName]에서 신정부 선포!"
