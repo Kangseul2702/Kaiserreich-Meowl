@@ -20,8 +20,8 @@ focus_tree = {
 	
 	focus = {
 		id = MEO_birth_of_new_soul
-		icon = GFX_goal_generic_demand_territory
-		cost = 11
+		icon = GFX_focus_MEO_birth_of_new_soul
+		cost = 3
 
 		x = 12
 		y = 0

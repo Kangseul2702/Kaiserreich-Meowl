@@ -15,6 +15,10 @@ ideas = {
 				coordination_bonus = 0.05
 				supply_consumption_factor = -0.05
 				equipment_capture = 0.03
+				conscription = 0.01
+				weekly_manpower = 125
+				army_core_attack_factor = 0.2
+				army_core_defence_factor = 0.2
 			}
 		}
 

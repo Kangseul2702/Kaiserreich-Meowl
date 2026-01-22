@@ -1,0 +1,7 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_focus_MEO_birth_of_new_soul"
+		texturefile = "gfx/interface/goals/focus_MEO_birth_of_new_soul.png"
+	}
+}
+

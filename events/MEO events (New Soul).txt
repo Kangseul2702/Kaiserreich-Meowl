@@ -143,7 +143,7 @@ country_event = {
 		log = "[GetLogInfo]: event meowl_events.6 option meowl_events.6.b"
 		name = meowl_events.6.b
 		ai_chance = { base = 0 }
-		NEE = { change_tag_from = ROOT }
+		MEO = { change_tag_from = ROOT }
 	}
 }
 
