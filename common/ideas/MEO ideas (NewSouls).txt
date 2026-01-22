@@ -1,0 +1,26 @@
+ideas = {
+	country = {
+		MEO_fighting_for_meowl_ns = {
+			modifier = {
+				war_support_factor = 0.20
+				no_supply_grace = 168
+				compliance_growth_on_our_occupied_states = -0.25
+				resistance_target_on_our_occupied_states = 0.2
+			}
+		}
+		MEO_meowl_guard_ns = {
+			modifier = {
+				experience_gain_army = 0.1
+				land_reinforce_rate = 0.03
+				coordination_bonus = 0.05
+				supply_consumption_factor = -0.05
+				equipment_capture = 0.03
+			}
+		}
+
+	}
+
+	industrial_concern = {
+
+	}
+}

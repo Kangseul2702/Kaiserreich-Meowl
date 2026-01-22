@@ -53,6 +53,10 @@
  MEO_birth_of_new_soul: "탄생"
  MEO_birth_of_new_soul_desc: ""
 
+### National Spirits ###
+ MEO_fighting_for_meowl_ns: "먀울을 위해 싸우자!"
+ MEO_meowl_guard_ns: "먀울 민병대"
+
 ### Decisions ###
  MEO_invasion_coming: "침공 임박!"
  MEO_invasion_coming_desc: "큰일이 났습니다! 적들이 우리를 침공하려 합니다!"
@@ -67,7 +71,7 @@
  meowl_events.2.a: "한 시가 급하니 이 사안은 미뤄두자."
  meowl_events.2.b: "이런 장난은 그만 둬라."
 
- meowl_events.3.t: "[386.GetCapitalVictoryPointName]에서 새정부 선포!"
+ meowl_events.3.t: "[386.GetCapitalVictoryPointName]에서 신정부 선포!"
  meowl_events.3.d: "충격적인 소식이 전해졌습니다. 며칠간 소식이 끊겼던 [386.GetCapitalVictoryPointName]에서 새로운 정부가 수립되었다는 것입니다. 자체 민병대를 앞세운 괴생명체가 직접 신 정부 설립을 선언했습니다. 그 생명체는 고양이의 얼굴과 부엉이의 몸을 지니고 있었습니다.\n\n스스로를 '새로운 영혼' 그리고 '먀울'이라 칭한 이 존재는 기존 정부와 미합중국을 포함한 모든 기성 사상을 '구 영혼들(old souls)'로 규정했습니다. 나아가 이들을 국가의 적으로 선포하기까지 했습니다.\n\n미국 내전이 격화되면서 혼란을 틈타 분리 독립을 선언하는 군소 세력들이 곳곳에서 등장하고 있습니다. [386.GetCapitalVictoryPointName]의 새 정부 역시 그런 기회주의적 세력 중 하나일 수도 있습니다. 하지만 다른 속셈이 있는 것인지는 오직 먀울만이 알 것입니다."
  meowl_events.3.a: "어쩔수 없군...(새로운 영혼으로 플레이)"
  meowl_events.3.b: "어쩔수 없군..."
@@ -79,10 +83,17 @@
  meowl_events.5.t: "침공 임박!"
  meowl_events.5.d: "$ACC_ACW$이 우리를 침공할 준비를 하고 있습니다. 그들은 우리를 '반란군'으로 규정하고 진압하려 합니다. 우리는 이 위협에 맞서 싸워야 합니다."
  meowl_events.5.a: "침공을 막아내겠다!"
+
+ meowl_events.6.t: "[386.GetCapitalVictoryPointName]에서 신정부 선포!"
+ meowl_events.6.a: "그렇군"
+ meowl_events.6.b: "(새로운 영혼으로 플레이)"
+
+ meowl_events.7.t: "먀울 민병대 창설"
+ meowl_events.7.d: "첫 번째 뉴 소울이 등장하고 대중들은 먀울을 위해 들고 일어나기 시작했습니다. 대공항과 내전이라는 위기에서 염증이 난 대중들은 스스로 무장하고 먀울의 사상에 감화되어 스스로을 전선에 뛰어들기로 했습니다. "
  
 ### Tooltips ###
  tooltip_no_meowl: "이 선택지를 고르면 먀울과 관련된 이벤트 체인은 더 이상 발동하지 않습니다."
- feature_highlight_icon_meowl_tt: "§Y먀울 콘텐츠!!!!!!!!!!!!!!!!!!!!!§!\n미국 내전에서\n§1개§!§2쩌§!§3는§!§4먀§!§5울§!§6등§!§7장§!§!"
+ feature_highlight_icon_meowl_tt: "§Y먀울 콘텐츠!!!!!!!!!!!!!!!!!!!!!§!\n미국 내전에서\n§1개§!§2쩌§!§3는§!§4먀§!§5울§!§6등§!§7장§!§!\n\n§R요구 조건:§!\n@USA 제2차 미국 내전§W에서§! §C맥아더에 대항한 내전§!"
 
 ### Country Names ###
  MEO: "새로운 영혼"
