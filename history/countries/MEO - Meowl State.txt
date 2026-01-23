@@ -7,7 +7,7 @@ set_war_support = 0.5
 USA_starting_techs = yes
 
 set_politics = {
-	ruling_party = paternal_autocrat
+	ruling_party = national_populist
 	last_election = "1936.11.05"
 	election_frequency = 48
 	elections_allowed = yes
@@ -20,10 +20,10 @@ set_popularities = {
 	social_democrat = 14
 	social_liberal = 5
 	market_liberal = 6
-	social_conservative = 13
+	social_conservative = 1
 	authoritarian_democrat = 6
-	paternal_autocrat = 32
-	national_populist = 1
+	paternal_autocrat = 10
+	national_populist = 35
 }
 
 add_ai_strategy = {

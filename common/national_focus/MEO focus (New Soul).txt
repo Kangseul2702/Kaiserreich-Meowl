@@ -1,3 +1,5 @@
+#!gfx:interface\kaiserreich\goals.gfx
+#!gfx:interface\Meowl\goals.gfx
 ######################################################
 # New Soul Focus Tree
 # By Meowl and Cabbit ^^
@@ -38,5 +40,141 @@ focus_tree = {
 			add_political_power = 200
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
+	}
+	
+	focus = {
+		id = MEO_put_up_barricade
+		icon = GFX_goal_generic_barricades
+		prerequisite = { focus = MEO_birth_of_new_soul }
+		cost = 3
+
+		x = -1
+		y = 1
+		relative_position_id = MEO_birth_of_new_soul
+
+		ai_will_do = { factor = 50 }
+		available = {
+
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_put_up_barricade"
+			add_command_power = 25
+			386 = {
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 10271
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 1
+						VP = 10271
+					}
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 10687
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 1
+						VP = 10687
+					}
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 1690
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 1
+						VP = 1690
+					}
+				}
+				custom_override_tooltip = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 10693
+					}
+					tooltip = {
+						localization_key = tooltip_add_building_on_victory_point
+						BUILDING = bunker
+						NUMBER = 1
+						VP = 10693
+					}
+				}
+			}
+			add_equipment_to_stockpile = { type = support_equipment amount = 500 producer = MEO }
+		}
+	}
+	
+	focus = {
+		id = MEO_conflict_resolution
+		icon = GFX_focus_MEO_conflict_resolution
+		prerequisite = { focus = MEO_birth_of_new_soul }
+		cost = 3
+
+		x = 1
+		y = 1
+		relative_position_id = MEO_birth_of_new_soul
+
+		ai_will_do = { factor = 50 }
+		available = {
+
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_conflict_resolution"
+			set_power_balance = {
+				id = MEO_power_balance
+				set_value = -0.25
+				left_side = MEO_friendly_side
+				right_side = MEO_not_friendly_side
+			}
+
+		}
+	}
+	
+	focus = {
+		id = MEO_future_decisions
+		icon = GFX_goal_ideology_national_populist_eagle
+		prerequisite = { 
+			focus = MEO_put_up_barricade
+			focus = MEO_conflict_resolution
+		}
+		cost = 3
+
+		x = 0
+		y = 2
+		relative_position_id = MEO_birth_of_new_soul
+
+		ai_will_do = { factor = 50 }
+		available = {
+			# 호헌정부 먹으면 열려야 함
+			owns_state = 1
+			NOT = {
+				has_war = no
+				country_exists = ACC
+			}
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_future_decisions"
+
+		}
 	}
 }
