@@ -150,6 +150,53 @@ focus_tree = {
 	}
 	
 	focus = {
+		id = MEO_from_militia_to_army
+		icon = GFX_goal_mass_concentration_of_army
+		prerequisite = { 
+			focus = MEO_put_up_barricade
+			focus = MEO_conflict_resolution
+		}
+		cost = 3
+
+		x = -4
+		y = 1
+		relative_position_id = MEO_put_up_barricade
+
+		ai_will_do = { factor = 50 }
+		available = {
+
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_from_militia_to_army"
+			
+		}
+	}
+	
+	focus = {
+		id = MEO_
+		icon = GFX_goal_generic_army_command_power
+		prerequisite = { 
+			focus = MEO_from_militia_to_army
+		}
+		cost = 3
+
+		x = -1
+		y = 1
+		relative_position_id = MEO_from_militia_to_army
+
+		ai_will_do = { factor = 50 }
+		available = {
+
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_from_militia_to_army"
+			
+		}
+	}
+	
+	focus = {
 		id = MEO_future_decisions
 		icon = GFX_goal_ideology_national_populist_eagle
 		prerequisite = { 
@@ -164,11 +211,12 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		available = {
-			# 호헌정부 먹으면 열려야 함
-			owns_state = 1
-			NOT = {
-				has_war = no
-				country_exists = ACC
+			has_war = no
+			owns_state = 797
+			owns_state = 798
+			ACC = {
+				has_capitulated = yes
+				exists = no
 			}
 		}
 

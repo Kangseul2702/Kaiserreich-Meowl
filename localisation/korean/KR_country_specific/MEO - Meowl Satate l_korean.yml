@@ -56,6 +56,10 @@
  MEO_put_up_barricade_desc: ""
  MEO_conflict_resolution: "먀울-캐빗 갈등 봉합"
  MEO_conflict_resolution_desc: "쌀쌀한 날 벤치에 앉아있던 캐빗을 향해 물을 뿌린 먀울로부터 시작된 갈등은 끝을 모르고 심화되고 있었습니다. 먀울과 캐빗 사이의 골은 점점 깊어져만 갔습니다. 하지만 상황이 상황인 만큼 지금 당장은 단결해야 하지 않겠습니까? 우리 모두 새로운 세계에 발을 디뎠습니다. 서로 양보하고 이해하며 갈등을 봉합해야 할 때입니다."
+ MEO_future_decisions: "미래 결정"
+ MEO_future_decisions_desc: ""
+ MEO_from_militia_to_army: "정규군으로 발전"
+ MEO_from_militia_to_army_desc: "먀울을 위해 모인 이들의 무장은 너무나도 빈약합니다. "
 
 ### National Spirits ###
  MEO_fighting_for_meowl_ns: "먀울을 위해 싸우자!"
