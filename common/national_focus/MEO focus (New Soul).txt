@@ -39,7 +39,6 @@ focus_tree = {
 			log = "[GetLogRoot]: Focus Completed MEO_birth_of_new_soul"
 			add_political_power = 200
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 	
 	focus = {
@@ -152,14 +151,10 @@ focus_tree = {
 	focus = {
 		id = MEO_from_militia_to_army
 		icon = GFX_goal_mass_concentration_of_army
-		prerequisite = { 
-			focus = MEO_put_up_barricade
-			focus = MEO_conflict_resolution
-		}
 		cost = 3
 
-		x = -4
-		y = 1
+		x = -5
+		y = 0
 		relative_position_id = MEO_put_up_barricade
 
 		ai_will_do = { factor = 50 }
@@ -174,14 +169,14 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = MEO_
+		id = MEO_special_forces
 		icon = GFX_goal_generic_army_command_power
 		prerequisite = { 
 			focus = MEO_from_militia_to_army
 		}
 		cost = 3
 
-		x = -1
+		x = -3
 		y = 1
 		relative_position_id = MEO_from_militia_to_army
 
@@ -191,7 +186,99 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed MEO_from_militia_to_army"
+			log = "[GetLogRoot]: Focus Completed MEO_special_forces"
+			
+		}
+	}
+
+	focus = {
+		id = MEO_meowlification_army
+		icon = GFX_goal_generic_army_command_power
+		prerequisite = { 
+			focus = MEO_from_militia_to_army
+		}
+		cost = 3
+
+		x = 1
+		y = 1
+		relative_position_id = MEO_from_militia_to_army
+
+		ai_will_do = { factor = 50 }
+		available = {
+
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_meowlification_army"
+			
+		}
+	}
+
+	focus = {
+		id = MEO_meowl_airforce
+		icon = GFX_focus_generic_air_bases
+		prerequisite = { 
+			focus = MEO_meowlification_army
+		}
+		cost = 3
+
+		x = 2
+		y = 1
+		relative_position_id = MEO_meowlification_army
+
+		ai_will_do = { factor = 50 }
+		available = {
+
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_meowl_airforce"
+			
+		}
+	}
+
+	focus = {
+		id = MEO_meowl_navy
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { 
+			focus = MEO_meowlification_army
+		}
+		cost = 3
+
+		x = -2
+		y = 1
+		relative_position_id = MEO_meowlification_army
+
+		ai_will_do = { factor = 50 }
+		available = {
+
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_meowl_navy"
+			
+		}
+	}
+
+	focus = {
+		id = MEO_meowl_armed_forces
+		icon = GFX_goal_generic_navy
+		prerequisite = { 
+			focus = MEO_meowlification_army
+		}
+		cost = 3
+
+		x = 0
+		y = 1
+		relative_position_id = MEO_meowlification_army
+
+		ai_will_do = { factor = 50 }
+		available = {
+
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_meowl_armed_forces"
 			
 		}
 	}
@@ -215,8 +302,10 @@ focus_tree = {
 			owns_state = 797
 			owns_state = 798
 			ACC = {
-				has_capitulated = yes
-				exists = no
+				OR = {
+					has_capitulated = yes
+					exists = no
+				}
 			}
 		}
 

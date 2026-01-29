@@ -60,6 +60,16 @@
  MEO_future_decisions_desc: ""
  MEO_from_militia_to_army: "정규군으로 발전"
  MEO_from_militia_to_army_desc: "먀울을 위해 모인 이들의 무장은 너무나도 빈약합니다. "
+ MEO_special_forces: "먀울 특수부대 창설"
+ MEO_special_forces_desc: ""
+ MEO_meowlification_army: "군대 먀울화"
+ MEO_meowlification_army_desc: ""
+ MEO_meowl_airforce: "먀울의 날개"
+ MEO_meowl_airforce_desc: ""
+ MEO_meowl_navy: "먀울의 그림자"
+ MEO_meowl_navy_desc: ""
+ MEO_meowl_armed_forces: "먀울의 발톱"
+ MEO_meowl_armed_forces_desc: ""
 
 ### National Spirits ###
  MEO_fighting_for_meowl_ns: "먀울을 위해 싸우자!"

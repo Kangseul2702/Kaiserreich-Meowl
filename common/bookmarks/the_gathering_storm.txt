@@ -302,7 +302,9 @@ bookmarks = {
 
 			}
 			focuses = {
-
+				MEO_birth_of_new_soul
+				MEO_future_decisions
+				MEO_conflict_resolution
 			}
 		}
 
