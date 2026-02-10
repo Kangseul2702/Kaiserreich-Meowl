@@ -1,0 +1,16 @@
+scripted_gui = {
+	specific_mechanic_button_disabled = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "specific_mechanic_button_disabled_window"
+
+		ai_enabled = {
+			always = no
+		}
+
+		visible = {
+			# has_any_specific_mechanic = no
+			always = yes
+		}
+	}
+}

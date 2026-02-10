@@ -2,6 +2,13 @@
  MEO_KR_gathering_storm_desc: "1936년, 대공황과 정치적 분열이 미국을 벼랑 끝으로 내몰았습니다. 기존 권력이 흔들리고 내전의 전운이 감도는 사이, 시애틀의 안개 속에서 수수께끼의 지도자 '먀울'이 등장했습니다. 그는 현존하는 모든 문명을 실패한 '오래된 영혼'으로 규정하고 인류의 완전한 변혁을 선언했습니다. 낡은 질서가 붕괴하기 직전인 지금, '새로운 영혼'들은 세계를 뒤엎을 기로에 서 있습니다...\n\n§B해당 국가를 선택하면 $USA_social_liberal$으로 변경됩니다.\n\n§R플레이하려면 제2차 미국 내전에서 $ACC_ACW$을 선택하여야 합니다.§!"
  meowl_focus: "새로운 영혼 중점 트리"
 
+### Intro ###
+ MEO_country_intro_background: "GFX_MEO_intro"
+ MEO_country_intro_header: "먀울과 새로운 영혼"
+ MEO_country_intro_content: ""
+
+ MEO_guide: ""
+
 ### Parties ###
  MEO_totalist_party: "C.A.B.B.I.T"
  MEO_totalist_party_long: "제국주의 폭정을 타파하는 계급 행동국\n(Class Action Bureau Bashing Imperialist Tyranny)"
