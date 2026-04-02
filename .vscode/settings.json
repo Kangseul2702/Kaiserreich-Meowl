@@ -1,0 +1,80 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Settings file used to enforce team wide VSC settings; any change you make here will be applied to the rest of the team //
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+{
+
+/////////
+// VSC //
+/////////
+
+    // Sets the file browser to not follow open files
+    "explorer.autoReveal": false,
+
+/////////////////////////////////////
+// Adding New Ignored Files/Errors //
+/////////////////////////////////////
+// When adding new ignored files/errors please make sure of the following:
+// 1. You are 110% sure that it is actually a bug with CWTools, not an error on your end
+// 2. Check if it has already been reported, and if so, add it under that section here
+// 3. If not, make a new issue report here: https://github.com/cwtools/cwtools-hoi4-config/issues and link it
+// 4. Update the file here with any new files you add: https://github.com/Kaiserreich/Kaiserreich-4-Development/tree/master/.github/workflows
+// This also applies in reverse when removing files
+
+	// Ignoring errors from certain files
+    "cwtools.errors.ignorefiles": [
+        // Empty
+    ],
+
+	// Ignoring certain error types
+    "cwtools.errors.ignore": [
+
+		// Localisation key commands aren't fully supported, issue report here: https://github.com/cwtools/cwtools-hoi4-config/issues/65
+        "CW226",
+
+        // Localisation key contains unexpected characters and may not render correctly
+        // We have to ignore that error due to huge number of special characters in GER loc
+        "CW275",
+
+    ],
+
+    // Do not put version control into auto-generated localisation
+    "cwtools.localisation.generated_strings": ": \"LOREM IPSUM DOLOR SIT AMET\"",
+
+////////////////////////////////
+// GitLens - Git Supercharged //
+////////////////////////////////
+
+    // Only shows document ownership at the top rather within files
+    "gitlens.codeLens.scopes": [
+        "document"
+    ],
+
+    // Sorts our tags from most recent to least recent
+    "gitlens.sortTagsBy": "name:asc",
+
+////////////////////////
+// Code Spell Checker //
+////////////////////////
+
+	// Enforce British English dictionary
+    "cSpell.language": "en-GB",
+
+    // Ensures we are only checking between quotes
+    "cSpell.includeRegExpList": [
+        "\".*\""
+    ],
+
+    // Things we shouldn't check
+    "cSpell.ignoreRegExpList": [
+        "§.", // No colourisation commands
+        "\\[[^\\]]*\\]", // Nothing in square brackets
+        "£\\w*", // No icon commands
+        "\\\\n" // No new lines
+    ],
+
+    // Expands the number of spelling errors that are shown at once
+    "cSpell.maxDuplicateProblems": 10,
+    "cSpell.maxNumberOfProblems": 10000,
+    "hoi4ModUtilities.modFile": "c:\\Users\\Administrator\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\Kaiserreich-Meowl\\descriptor.mod",
+}
