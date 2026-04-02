@@ -106,6 +106,11 @@ country_event = {
 				civilian = { small = GFX_portrait_MEO_chief_of_naval_meowl_civilian_small }
 			}
 		}
+		custom_effect_tooltip = {
+			localization_key = meowl_transformation_tooltip
+			CHARACTER = NKR_navy_advisor
+			AFTER = MEO_chief_of_naval_meowl
+		}
 	}
 }
 
@@ -161,7 +166,33 @@ country_event = {
 	}
 }
 
+country_event = {
+	id = meowl_events.8
+	title = meowl_events.8.t
+	desc = meowl_events.8.d
+	picture = GFX_report_event_Meowl_events_01
 
+	is_triggered_only = yes 
+
+	option = {
+		log = "[GetLogInfo]: event meowl_events.8 option meowl_events.8.a"
+		name = meowl_events.8.a
+	}
+}
+
+country_event = {
+	id = meowl_events.9
+	title = meowl_events.9.t
+	desc = meowl_events.9.d
+	picture = GFX_report_event_Meowl_events_01
+
+	is_triggered_only = yes 
+
+	option = {
+		log = "[GetLogInfo]: event meowl_events.9 option meowl_events.9.a"
+		name = meowl_events.9.a
+	}
+}
 
 country_event = {
 	id = cabbit_events.1

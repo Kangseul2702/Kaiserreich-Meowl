@@ -10,12 +10,10 @@ MEO_power_balance = {
 		min = -0.10
 		max = 0.10
 		modifier = {
-			
-		}
-		on_activate = {
-		}
-		on_deactivate = {
-			
+			stability_factor = 0.15
+			political_power_gain = 0.1
+			war_support_factor = 0.1
+
 		}
 	}
 
@@ -29,13 +27,9 @@ MEO_power_balance = {
 			min = 0.1
 			max = 0.4
 			modifier = {
-
-			}
-			on_activate = {
-				
-			}
-			on_deactivate = {
-				
+				stability_factor = 0.1
+				political_power_gain = 0.1
+				war_support_factor = 0.1
 			}
 		}
 		range = {
@@ -43,11 +37,8 @@ MEO_power_balance = {
 			min = 0.4
 			max = 0.7
 			modifier = {
-				
-			}
-			on_activate = {
-			}
-			on_deactivate = {
+				political_power_gain = 0.05
+				war_support_factor = 0.05
 			}
 		}
 		range = {
@@ -55,14 +46,13 @@ MEO_power_balance = {
 			min = 0.7
 			max = 1
 			modifier = {
-				
+				stability_factor = -0.1
+				war_support_factor = 0.03
 			}
 			on_activate = {
-				
+				country_event = meowl_events.8
 			}
-			on_deactivate = {
-				
-			}
+
 		}
 	}
 
@@ -76,13 +66,9 @@ MEO_power_balance = {
 			min = -0.4
 			max = -0.1
 			modifier = {
-				
-			}
-			on_activate = {
-
-			}
-			on_deactivate = {
-				
+				stability_factor = 0.2
+				political_power_gain = 0.1
+				war_support_factor = 0.1
 			}
 		}
 		range = {
@@ -90,13 +76,9 @@ MEO_power_balance = {
 			min = -0.7
 			max = -0.4
 			modifier = {
-				
-			}
-			on_activate = {
-				
-			}
-			on_deactivate = {
-				
+				stability_factor = 0.2
+				political_power_gain = 0.15
+				war_support_factor = 0.1
 			}
 		}
 		range = {
@@ -104,13 +86,12 @@ MEO_power_balance = {
 			min = -1
 			max = -0.7
 			modifier = {
-				
+				stability_factor = 0.3
+				political_power_gain = 0.2
+				war_support_factor = 0.3
 			}
 			on_activate = {
-				
-			}
-			on_deactivate = {
-				
+				country_event = meowl_events.9
 			}
 		}
 	}
