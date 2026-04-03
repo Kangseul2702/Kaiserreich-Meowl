@@ -76,5 +76,4 @@
     // Expands the number of spelling errors that are shown at once
     "cSpell.maxDuplicateProblems": 10,
     "cSpell.maxNumberOfProblems": 10000,
-    "hoi4ModUtilities.modFile": "c:\\Users\\Administrator\\Documents\\Paradox Interactive\\Hearts of Iron IV\\mod\\Kaiserreich-Meowl\\descriptor.mod",
 }
