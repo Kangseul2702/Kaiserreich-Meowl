@@ -13,7 +13,12 @@ crisis = {
 
 		timeout_effect = {
 			log = "[GetLogRoot]: Decision timeout MEO_invasion_coming"
-			ACC = {
+			every_country = {
+				limit = {
+					is_american_tag = yes
+					is_neighbor_of = MEO
+					NOT = { original_tag = MEO }
+				}
 				declare_war_on = {
 					target = MEO
 					type = civil_war

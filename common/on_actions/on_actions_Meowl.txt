@@ -2,9 +2,10 @@ on_actions = {
 	on_startup = {
 		effect = {
 			MEO = {
-				USA = {
-					change_tag_from = PREV
-				}
+				set_country_flag = is_in_americas
+				add_to_array = { global.american_tags_array = THIS }
+
+				USA = { change_tag_from = PREV }
 			}
 		}
 	}

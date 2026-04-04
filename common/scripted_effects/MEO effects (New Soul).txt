@@ -1,4 +1,4 @@
-ACC_release_MEO = {
+ACW_release_MEO = {
 	set_global_flag = USA_MEO_existed
 	effect_tooltip = { release = MEO }
 	hidden_effect = {
@@ -10,13 +10,15 @@ ACC_release_MEO = {
 			limit = { is_core_of = MEO }
 			transfer_state_to = MEO
 			teleport_armies = {
-				limit = { is_ally_with = ACC }
+				limit = { 
+					NOT = { original_tag = MEO }
+					is_american_tag = yes
+				}
 				to_state_array = owned_controlled_states
 			}
 		}
 
 		MEO = {
-			open_intro_screen = yes
 			every_owned_state = {
 				set_demilitarized_zone = no
 				USA_remove_support_modifiers_from_state = yes
@@ -39,9 +41,30 @@ ACC_release_MEO = {
 			# 	load_oob = ACW_WCA_air_legacy
 			# }
 
+			delete_unit = { id = 1776 }
+
 			MEO_spawn_starting_civil_war_divisions = yes
 			unit_limit_calculation_effect = yes
-			
+
+			## ACW units
+			delete_unit_template_and_units = { division_template = "Red Guard" }
+			delete_unit_template_and_units = { division_template = "Minutemen" }
+			delete_unit_template_and_units = { division_template = "National Guardsmen" }
+			delete_unit_template_and_units = { division_template = "National Cavalry" }
+			delete_unit_template_and_units = { division_template = "Reserve Militia" }
+			delete_unit_template_and_units = { division_template = "Defense Force" }
+			delete_unit_template_and_units = { division_template = "Loyalist Cavalry" }
+			delete_unit_template_and_units = { division_template = "State Militia" }
+			delete_unit_template_and_units = { division_template = "State Guard" }
+			delete_unit_template_and_units = { division_template = "Volunteer Cavalry" }
+			delete_unit_template_and_units = { division_template = "National Guard Infantry Division" }
+			delete_unit_template_and_units = { division_template = "National Guard Cavalry Division" }
+			delete_unit_template_and_units = { division_template = "Armored Cavalry Division" }
+			delete_unit_template_and_units = { division_template = "Cavalry Division" }
+			delete_unit_template_and_units = { division_template = "Marine Division" }
+			delete_unit_template_and_units = { division_template = "Infantry Division" }
+			delete_unit_template_and_units = { division_template = "Organised Reserve Infantry Division" }
+
 			country_event = { id = meowl_events.1 days = 3 } # Initialization
 			country_event = { id = meowl_events.4 days = 6 } # Transformation
 			country_event = { id = meowl_events.5 days = 30 } # Invasion Coming
@@ -54,26 +77,21 @@ MEO_spawn_starting_civil_war_divisions = {
 	create_MEO_militia_template = yes
 	create_MEO_garrison_template = yes
 	create_MEO_mounted_militia_template = yes
-	create_MEO_organised_reserve_template = yes
 	capital_scope = {
 		create_unit = {
 			division = "division_template = \"Meowl Guard\" start_experience_factor = 0.5"
 			owner = PREV
-			count = 5
+			count = 7
 		}
 		create_unit = {
-			division = "division_template = \"Continental Line\" start_experience_factor = 0.2"
+			division = "division_template = \"Meowl Continental Line\" start_experience_factor = 0.5"
 			owner = PREV
 			count = 2
 		}
 		create_unit = {
-			division = "division_template = \"Organised Reserve Infantry Division\" start_experience_factor = 0.1"
+			division = "division_template = \"Meowl Continental Cavalry\" start_experience_factor = 0.5"
 			owner = PREV
-			count = 2
-		}
-		create_unit = {
-			division = "division_template = \"Continental Cavalry\" start_experience_factor = 0.2"
-			owner = PREV
+			count = 3
 		}
 	}
 }
@@ -90,8 +108,9 @@ create_MEO_militia_template = {
 				militia = { x = 0 y = 0 }
 				militia = { x = 0 y = 1 }
 				militia = { x = 0 y = 2 }
-				militia = { x = 0 y = 3 }
 				militia = { x = 1 y = 0 }
+				militia = { x = 1 y = 1 }
+				militia = { x = 1 y = 2 }
 			}
 			priority = 0
 		}
@@ -101,10 +120,10 @@ create_MEO_militia_template = {
 create_MEO_garrison_template = {
 	if = {
 		limit = {
-			NOT = { has_template = "Continental Line" }
+			NOT = { has_template = "Meowl Continental Line" }
 		}
 		division_template = {
-			name = "Continental Line"
+			name = "Meowl Continental Line"
 			division_names_group = USA_GAR_01
 			regiments = {
 				infantry = { x = 0 y = 0 }
@@ -115,7 +134,6 @@ create_MEO_garrison_template = {
 				infantry = { x = 1 y = 2 }
 			}
 			template_counter = 6
-			priority = 0
 		}
 	}
 }
@@ -123,10 +141,10 @@ create_MEO_garrison_template = {
 create_MEO_mounted_militia_template = {
 	if = {
 		limit = {
-			NOT = { has_template = "Continental Cavalry" }
+			NOT = { has_template = "Meowl Continental Cavalry" }
 		}
 		division_template = {
-			name = "Continental Cavalry"
+			name = "Meowl Continental Cavalry"
 			division_names_group = USA_CAV_01
 			regiments = {
 				cavalry = { x = 0 y = 0 }
@@ -136,30 +154,6 @@ create_MEO_mounted_militia_template = {
 				cavalry = { x = 1 y = 1 }
 				cavalry = { x = 1 y = 2 }
 			}
-		}
-	}
-}
-
-create_MEO_organised_reserve_template = {
-	if ={
-		limit = {
-			NOT = { has_template = "Organised Reserve Infantry Division" }
-		}
-		division_template = {
-			name = "Organised Reserve Infantry Division"
-			division_names_group = USA_INF_01
-			regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 0 y = 2 }
-				infantry = { x = 1 y = 0 }
-				infantry = { x = 1 y = 1 }
-				infantry = { x = 1 y = 2 }
-				infantry = { x = 2 y = 0 }
-				infantry = { x = 2 y = 1 }
-				infantry = { x = 2 y = 2 }
-			}
-			template_counter = 6
 		}
 	}
 }
