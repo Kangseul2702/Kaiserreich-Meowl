@@ -18,14 +18,14 @@ focus_tree = {
 	}
 
 	default = no
-	continuous_focus_position = { x = 3000 y = 690 }
+	continuous_focus_position = { x = 400 y = 1000 }
 	
 	focus = {
 		id = MEO_birth_of_new_soul
 		icon = GFX_focus_MEO_birth_of_new_soul
 		cost = 3
 
-		x = 4
+		x = 6
 		y = 0
 
 		ai_will_do = { factor = 50 }
@@ -114,70 +114,28 @@ focus_tree = {
 
 		}
 	}
-	
+
 	focus = {
-		id = MEO_from_militia_to_army
-		icon = GFX_goal_mass_concentration_of_army
+		id = MEO_meowlification_army
+		icon = GFX_goal_generic_army_command_power
 		cost = 3
 
-		x = 14
+		x = 19
 		y = 0
-		relative_position_id = MEO_put_up_barricade
 
 		ai_will_do = { factor = 50 }
 		available = {
 			has_completed_focus = MEO_birth_of_new_soul
 		}
 
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed MEO_from_militia_to_army"
-			add_doctrine_cost_reduction = {
-				name = GER_yearning_for_MEO_from_militia_to_armycannae
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-		}
-	}
-	
-	focus = {
-		id = MEO_special_forces
-		icon = GFX_goal_generic_army_command_power
-		prerequisite = { 
-			focus = MEO_from_militia_to_army
-		}
-		cost = 3
-
-		x = 3
-		y = 1
-		relative_position_id = MEO_from_militia_to_army
-
-		ai_will_do = { factor = 50 }
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed MEO_special_forces"
-			
-		}
-	}
-
-	focus = {
-		id = MEO_meowlification_army
-		icon = GFX_goal_generic_army_command_power
-		prerequisite = { 
-			focus = MEO_from_militia_to_army
-		}
-		cost = 3
-
-		x = -4
-		y = 1
-		relative_position_id = MEO_from_militia_to_army
-
 		ai_will_do = { factor = 50 }
 
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MEO_meowlification_army"
-			
+			army_experience = 50
+			navy_experience = 50
+			air_experience = 50
 		}
 	}
 
@@ -189,7 +147,7 @@ focus_tree = {
 		}
 		cost = 3
 
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = MEO_meowlification_army
 
@@ -197,7 +155,12 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MEO_meowl_airforce"
-			
+			add_doctrine_cost_reduction = {
+				name = MEO_meowl_airforce
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
 		}
 	}
 
@@ -209,7 +172,7 @@ focus_tree = {
 		}
 		cost = 3
 
-		x = -5
+		x = -4
 		y = 1
 		relative_position_id = MEO_meowlification_army
 
@@ -217,32 +180,41 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MEO_meowl_navy"
-			
+			add_doctrine_cost_reduction = {
+				name = MEO_meowl_navy
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
 		}
 	}
 
+	
 	focus = {
-		id = MEO_meowl_armed_forces
-		icon = GFX_goal_generic_navy
+		id = MEO_from_militia_to_army
+		icon = GFX_goal_mass_concentration_of_army
 		prerequisite = { 
 			focus = MEO_meowlification_army
 		}
 		cost = 3
 
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = MEO_meowlification_army
 
 		ai_will_do = { factor = 50 }
-		available = {
-
-		}
 
 		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed MEO_meowl_armed_forces"
-			
+			log = "[GetLogRoot]: Focus Completed MEO_from_militia_to_army"
+			add_doctrine_cost_reduction = {
+				name = MEO_from_militia_to_army
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
+
 	
 	focus = {
 		id = MEO_future_decisions
@@ -273,6 +245,246 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MEO_future_decisions"
 
+		}
+	}
+
+	focus = {
+		id = MEO_pacific_first
+		icon = GFX_goal_generic_carrier_aircraft
+		cost = 1
+
+		prerequisite = { focus = MEO_meowl_navy }
+		mutually_exclusive = { focus = MEO_over_the_continent }
+		relative_position_id = MEO_meowl_navy
+		x = -1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_over_the_continent
+		icon = GFX_focus_generic_navy_battleship3
+		cost = 1
+
+		prerequisite = { focus = MEO_meowl_navy }
+		mutually_exclusive = { focus = MEO_pacific_first }
+		relative_position_id = MEO_meowl_navy
+		x = 1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_grand_battleplan
+		icon = GFX_goal_generic_army_grand_battleplan
+		cost = 1
+
+		prerequisite = { focus = MEO_from_militia_to_army }
+		relative_position_id = MEO_from_militia_to_army
+		x = -1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_moblization_army
+		icon = GFX_goal_generic_army_mobile_warfare
+		cost = 1
+
+		prerequisite = { focus = MEO_from_militia_to_army }
+		relative_position_id = MEO_from_militia_to_army
+		x = 1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_fighter_research
+		icon = GFX_goal_generic_air_fighter_new
+		cost = 1
+
+		prerequisite = { focus = MEO_meowl_airforce }
+		relative_position_id = MEO_meowl_airforce
+		x = -1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_little_bomber_research
+		icon = GFX_goal_generic_air_tactical_bomber_new
+		cost = 1
+
+		prerequisite = { focus = MEO_meowl_airforce }
+		relative_position_id = MEO_meowl_airforce
+		x = 1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_research_submarine
+		icon = GFX_goal_generic_naval_submarine2
+		cost = 1
+
+		prerequisite = { 
+			focus = MEO_over_the_continent
+			focus = MEO_pacific_first
+		}
+		relative_position_id = MEO_pacific_first
+		x = 3
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_make_a_nuclear
+		icon = GFX_goal_nuclear
+		cost = 1
+
+		prerequisite = { 
+			focus = MEO_biological_superiority
+			focus = MEO_the_superiority_of_will 
+		}
+		relative_position_id = MEO_the_superiority_of_will
+		x = -3
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_bird_spirit
+		icon = GFX_goal_DOM_The_Phoenix
+		cost = 1
+
+		prerequisite = { focus = MEO_fighter_research }
+		relative_position_id = MEO_fighter_research
+		x = -1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_destroyer_production
+		icon = GFX_goal_generic_naval_destroyer2
+		cost = 1
+
+		prerequisite = { 
+			focus = MEO_pacific_first
+			focus = MEO_over_the_continent 
+		}
+		relative_position_id = MEO_over_the_continent
+		x = -1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_air_industrial
+		icon = GFX_goal_generic_industry_reallocation
+		cost = 1
+
+		prerequisite = { 
+			focus = MEO_little_bomber_research
+			focus = MEO_fighter_research 
+		}
+		relative_position_id = MEO_fighter_research
+		x = 1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_biological_superiority
+		icon = GFX_goal_brain
+		cost = 1
+
+		prerequisite = { focus = MEO_destroyer_production }
+		prerequisite = { focus = MEO_research_submarine }
+		prerequisite = { focus = MEO_regular_army }
+		prerequisite = { focus = MEO_bird_spirit }
+		prerequisite = { focus = MEO_air_industrial }
+		relative_position_id = MEO_air_industrial
+		mutually_exclusive = { focus = MEO_the_superiority_of_will }
+		x = -7
+		y = 2
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_the_superiority_of_will
+		icon = GFX_goal_JAP_samurai
+		cost = 1
+
+		prerequisite = { focus = MEO_bird_spirit }
+		prerequisite = { focus = MEO_air_industrial }
+		prerequisite = { focus = MEO_destroyer_production }
+		prerequisite = { focus = MEO_research_submarine }
+		prerequisite = { focus = MEO_regular_army }
+		relative_position_id = MEO_regular_army
+		mutually_exclusive = { focus = MEO_biological_superiority }
+		x = 3
+		y = 2
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_regular_army
+		icon = GFX_goal_offensive_army
+		cost = 1
+
+		prerequisite = { focus = MEO_from_militia_to_army }
+		prerequisite = { focus = MEO_grand_battleplan }
+		prerequisite = { focus = MEO_moblization_army }
+		relative_position_id = MEO_moblization_army
+		x = -1
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_joint_command_system
+		icon = GFX_goal_generic_army_high_command
+		cost = 1
+
+		prerequisite = { 
+			focus = MEO_research_submarine 
+			focus = MEO_bird_spirit 
+		}
+		prerequisite = { focus = MEO_regular_army }
+		relative_position_id = MEO_regular_army
+		x = 0
+		y = 1
+
+		completion_reward = {
 		}
 	}
 }
