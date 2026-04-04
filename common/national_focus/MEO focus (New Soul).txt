@@ -1,5 +1,3 @@
-#!gfx:interface\kaiserreich\goals.gfx
-#!gfx:interface\Meowl\goals.gfx
 ######################################################
 # New Soul Focus Tree
 # By Meowl and Cabbit ^^
@@ -127,9 +125,6 @@ focus_tree = {
 		available = {
 			has_completed_focus = MEO_birth_of_new_soul
 		}
-
-		ai_will_do = { factor = 50 }
-
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MEO_meowlification_army"
@@ -375,7 +370,10 @@ focus_tree = {
 		icon = GFX_goal_DOM_The_Phoenix
 		cost = 1
 
-		prerequisite = { focus = MEO_fighter_research }
+		prerequisite = { 
+			focus = MEO_fighter_research 
+			focus = MEO_little_bomber_research
+		}
 		relative_position_id = MEO_fighter_research
 		x = -1
 		y = 1
