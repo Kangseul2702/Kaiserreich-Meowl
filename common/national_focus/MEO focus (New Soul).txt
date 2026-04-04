@@ -312,6 +312,7 @@ focus_tree = {
 		cost = 1
 
 		prerequisite = { focus = MEO_meowl_airforce }
+		mutually_exclusive = { focus = MEO_little_bomber_research }
 		relative_position_id = MEO_meowl_airforce
 		x = -1
 		y = 1
@@ -326,6 +327,7 @@ focus_tree = {
 		cost = 1
 
 		prerequisite = { focus = MEO_meowl_airforce }
+		mutually_exclusive = { focus = MEO_fighter_research }
 		relative_position_id = MEO_meowl_airforce
 		x = 1
 		y = 1
