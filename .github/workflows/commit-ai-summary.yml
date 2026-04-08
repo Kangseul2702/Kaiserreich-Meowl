@@ -68,8 +68,8 @@ jobs:
 
       - name: Send to Railway bot
         env:
-          BOT_WEBHOOK_URL: ${{ secrets.BOT_WEBHOOK_URL }}
-          BOT_WEBHOOK_TOKEN: ${{ secrets.BOT_WEBHOOK_TOKEN }}
+          COMMIT_SUMMARY_WEBHOOK_URL: ${{ secrets.COMMIT_SUMMARY_WEBHOOK_URL }}
+          COMMIT_SUMMARY_WEBHOOK_TOKEN: ${{ secrets.COMMIT_SUMMARY_WEBHOOK_TOKEN }}
         run: |
           curl -X POST "$COMMIT_SUMMARY_WEBHOOK_URL" \
             -H "Authorization: Bearer $COMMIT_SUMMARY_WEBHOOK_TOKEN" \
