@@ -71,7 +71,7 @@ jobs:
           BOT_WEBHOOK_URL: ${{ secrets.BOT_WEBHOOK_URL }}
           BOT_WEBHOOK_TOKEN: ${{ secrets.BOT_WEBHOOK_TOKEN }}
         run: |
-          curl -X POST "$BOT_WEBHOOK_URL" \
-            -H "Authorization: Bearer $BOT_WEBHOOK_TOKEN" \
+          curl -X POST "$COMMIT_SUMMARY_WEBHOOK_URL" \
+            -H "Authorization: Bearer $COMMIT_SUMMARY_WEBHOOK_TOKEN" \
             -H "Content-Type: application/json" \
             --data @payload.json
