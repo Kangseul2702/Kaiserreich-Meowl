@@ -1,3 +1,5 @@
+#!gfx:interface\kaiserreich\goals.gfx
+#!gfx:interface\meowl\goals.gfx
 ######################################################
 # New Soul Focus Tree
 # By Meowl and Cabbit ^^
@@ -23,7 +25,7 @@ focus_tree = {
 		icon = GFX_focus_MEO_birth_of_new_soul
 		cost = 3
 
-		x = 6
+		x = 7
 		y = 0
 
 		ai_will_do = { factor = 50 }
@@ -118,7 +120,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_command_power
 		cost = 3
 
-		x = 19
+		x = 22
 		y = 0
 
 		ai_will_do = { factor = 50 }
@@ -229,12 +231,6 @@ focus_tree = {
 			has_war = no
 			owns_state = 797
 			owns_state = 798
-			ACC = {
-				OR = {
-					has_capitulated = yes
-					exists = no
-				}
-			}
 		}
 
 		completion_reward = {
@@ -482,6 +478,36 @@ focus_tree = {
 		prerequisite = { focus = MEO_regular_army }
 		relative_position_id = MEO_regular_army
 		x = 0
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_meowl_in_the_high_castle
+		icon = GFX_focus_MEO_meowl_in_the_high_castle
+		cost = 1
+
+		prerequisite = { focus = MEO_future_decisions }
+		mutually_exclusive = { focus = MEO_cabbit_propaganda }
+		relative_position_id = MEO_future_decisions
+		x = -4
+		y = 1
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = MEO_cabbit_propaganda
+		icon = GFX_focus_MEO_cabbit_confront_meowl
+		cost = 1
+
+		prerequisite = { focus = MEO_future_decisions }
+		mutually_exclusive = { focus = MEO_meowl_in_the_high_castle }
+		relative_position_id = MEO_future_decisions
+		x = 4
 		y = 1
 
 		completion_reward = {

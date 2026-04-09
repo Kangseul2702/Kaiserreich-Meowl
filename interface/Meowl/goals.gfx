@@ -7,5 +7,13 @@ spriteTypes = {
 		name = "GFX_focus_MEO_conflict_resolution"
 		texturefile = "gfx/interface/goals/focus_MEO_conflict_resolution.png"
 	}
+	SpriteType = {
+		name = "GFX_focus_MEO_meowl_in_the_high_castle"
+		texturefile = "gfx/interface/goals/focus_MEO_meowl_in_the_high_castle.png"
+	}
+	SpriteType = {
+		name = "GFX_focus_MEO_cabbit_confront_meowl"
+		texturefile = "gfx/interface/goals/focus_MEO_cabbit_confront_meowl.png"
+	}
 }
 
