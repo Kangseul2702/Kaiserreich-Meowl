@@ -1,3 +1,2 @@
-l_korean:
- specific_mechanic_button_disabled: "당신의 국가에는 §Y고유 메커니즘§!이 활성화되지 않았습니다."
- specific_mechanic_button_test: "테스트용 로컬라이제이션"
+﻿l_korean:
+ specific_mechanic_button_disabled_tt: "당신의 국가에는 §Y고유 메커니즘§!이 활성화되지 않았습니다."

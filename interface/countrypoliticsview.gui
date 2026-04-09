@@ -1968,7 +1968,7 @@ guiTypes = {
 			name = "specific_mechanic_button_disabled"
 			position = { x = 0 y = 0 }
 			quadTextureSprite = "GFX_power_balance_button_kr"
-			pdx_tooltip = specific_mechanic_button_disabled
+			pdx_tooltip = specific_mechanic_button_disabled_tt
 		}
 
 		iconType = {
