@@ -228,9 +228,9 @@ focus_tree = {
 
 		ai_will_do = { factor = 50 }
 		available = {
+			has_global_flag = USA_civil_war_begun_flag
+			has_country_flag = MEO_defend_success_flag
 			has_war = no
-			owns_state = 797
-			owns_state = 798
 		}
 
 		completion_reward = {

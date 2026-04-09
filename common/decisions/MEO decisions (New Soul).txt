@@ -24,6 +24,32 @@ crisis = {
 					type = civil_war
 				}
 			}
+			activate_mission = MEO_defend_success
+		}
+		fixed_random_seed = no
+	}
+
+	MEO_defend_success = {
+		icon = generic_inflation
+
+		allowed = { always = no }
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		selectable_mission = no
+		is_good = yes
+		days_mission_timeout = 200
+
+		timeout_effect = {
+			log = "[GetLogRoot]: Decision timeout MEO_defend_success"
+			every_country = {
+				limit = {
+					has_war_with = MEO
+				}
+				white_peace = { tag = MEO }
+			}
+			set_country_flag = MEO_defend_success_flag
 		}
 		fixed_random_seed = no
 	}

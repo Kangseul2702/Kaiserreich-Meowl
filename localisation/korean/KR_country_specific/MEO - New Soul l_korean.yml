@@ -115,6 +115,8 @@
 ### Decisions ###
  MEO_invasion_coming: "침공 임박"
  MEO_invasion_coming_desc: "적들이 우리를 침공하려 합니다!"
+ MEO_defend_success: "자연의 이름을 건 투쟁"
+ MEO_defend_success_desc: "방어하면이김"
 
 ### Events ###
  meowl_events.1.t: "행복한 먀울!"
@@ -147,6 +149,12 @@
 
  meowl_events.9.t: "동지애로 뭉친 새로운 영혼들"
  meowl_events.9.d: ""
+
+### Capitulation Events ###
+ capitulation_events_meowl.1.t: "서부 확보"
+ capitulation_events_meowl.1.d: "뉴소울미국서부확보함"
+ capitulation_events_meowl.1.a: "만세!"
+ capitulation_events_meowl.1.b: "않돼!"
  
 ### Tooltips ###
  tooltip_no_meowl: "이 선택지를 고르면 먀울과 관련된 이벤트 체인은 더 이상 발동하지 않습니다."
@@ -157,6 +165,7 @@
 ### Others ###
 ## Flags ##
  USA_MEO_existed: "먀울이 봉기함"
+ MEO_defend_success_flag: "침공에 맞서 방어에 성공함"
 
 ### BOP ###
  MEO_power_balance: "먀울-캐빗 관계도"
