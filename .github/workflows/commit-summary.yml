@@ -1,0 +1,136 @@
+name: Commit Summary
+
+on:
+  push:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  send-summary:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify repo ownership
+        env:
+          VERIFY_URL: https://discord-meowl-cabbit-production.up.railway.app/github/webhook/verify
+          VERIFY_AUDIENCE: discord-meowl-cabbit-commit-summary
+          REGISTRATION_ID: csr_29b77e915ec2
+          WEBHOOK_TOKEN: ${{ secrets.COMMIT_SUMMARY_WEBHOOK_TOKEN }}
+        run: |
+          test -n "$ACTIONS_ID_TOKEN_REQUEST_URL" || (echo "missing ACTIONS_ID_TOKEN_REQUEST_URL" && exit 1)
+          test -n "$ACTIONS_ID_TOKEN_REQUEST_TOKEN" || (echo "missing ACTIONS_ID_TOKEN_REQUEST_TOKEN" && exit 1)
+          test -n "$VERIFY_URL" || (echo "missing VERIFY_URL" && exit 1)
+          test -n "$VERIFY_AUDIENCE" || (echo "missing VERIFY_AUDIENCE" && exit 1)
+          test -n "$REGISTRATION_ID" || (echo "missing REGISTRATION_ID" && exit 1)
+          test -n "$WEBHOOK_TOKEN" || (echo "missing WEBHOOK_TOKEN" && exit 1)
+
+          oidc_token=$(curl --fail --show-error --silent --get \
+            -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            --data-urlencode "audience=$VERIFY_AUDIENCE" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value')
+
+          test -n "$oidc_token" || (echo "failed to get OIDC token" && exit 1)
+
+          jq -n \
+            --arg registrationId "$REGISTRATION_ID" \
+            --arg githubOidcToken "$oidc_token" \
+            '{registrationId:$registrationId, githubOidcToken:$githubOidcToken}' > verify.json
+
+          status=$(curl --silent --show-error \
+            -o verify-response.json \
+            -w "%{http_code}" \
+            -X POST "$VERIFY_URL" \
+            -H "Authorization: Bearer $WEBHOOK_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data @verify.json)
+
+          if [ "$status" = "200" ]; then
+            echo "verification succeeded"
+          elif [ "$status" = "409" ]; then
+            echo "verification already completed or duplicate request; continuing"
+            cat verify-response.json
+          else
+            echo "verification failed with status $status"
+            cat verify-response.json
+            exit 1
+          fi
+
+      - name: Build payload
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          REF_NAME: ${{ github.ref_name }}
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          compare_api="https://api.github.com/repos/${REPOSITORY}/compare/${BEFORE_SHA}...${AFTER_SHA}"
+
+          curl --fail --show-error --silent \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            "$compare_api" \
+            -o compare.json
+
+          jq \
+            --arg repository "$REPOSITORY" \
+            --arg branch "$REF_NAME" \
+            --arg before "$BEFORE_SHA" \
+            --arg after "$AFTER_SHA" \
+            '
+            {
+              event: "push",
+              repository: $repository,
+              branch: $branch,
+              before: $before,
+              after: $after,
+              compareUrl: .html_url,
+              commitList: (
+                .commits // [] | map({
+                  id: .sha,
+                  message: (.commit.message // ""),
+                  timestamp: (.commit.author.date // null),
+                  url: .html_url,
+                  author: { name: (.commit.author.name // "unknown") }
+                })
+              ),
+              changedFiles: (
+                .files // [] | map({
+                  filename: .filename,
+                  status: .status,
+                  additions: (.additions // 0),
+                  deletions: (.deletions // 0),
+                  changes: (.changes // 0),
+                  previous_filename: (.previous_filename // null),
+                  patch: (.patch // "")
+                })
+              ),
+              diffText: (
+                .files // []
+                | map(
+                    "FILE: " + .filename + "\n"
+                    + "STATUS: " + (.status // "modified") + "\n"
+                    + (.patch // "[patch omitted by GitHub]")
+                  )
+                | join("\n\n")
+              )
+            }
+            ' compare.json > payload.json
+
+      - name: Send commit summary webhook
+        env:
+          WEBHOOK_URL: https://discord-meowl-cabbit-production.up.railway.app/github/webhook
+          WEBHOOK_TOKEN: ${{ secrets.COMMIT_SUMMARY_WEBHOOK_TOKEN }}
+        run: |
+          test -n "$WEBHOOK_URL" || (echo "missing WEBHOOK_URL" && exit 1)
+          test -n "$WEBHOOK_TOKEN" || (echo "missing WEBHOOK_TOKEN" && exit 1)
+
+          curl --fail --show-error --silent \
+            -X POST "$WEBHOOK_URL" \
+            -H "Authorization: Bearer $WEBHOOK_TOKEN" \
+            -H "Content-Type: application/json" \
+            --data @payload.json
