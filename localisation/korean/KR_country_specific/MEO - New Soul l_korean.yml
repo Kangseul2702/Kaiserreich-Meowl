@@ -1,4 +1,4 @@
-﻿l_korean:
+l_korean:
  MEO_KR_gathering_storm_desc: "1936년, 대공황과 정치적 분열이 미국을 벼랑 끝으로 내몰았습니다. 기존 권력이 흔들리고 내전의 전운이 감도는 사이, 시애틀의 안개 속에서 수수께끼의 지도자 '먀울'이 등장했습니다. 그는 현존하는 모든 문명을 실패한 '오래된 영혼'으로 규정하고 인류의 완전한 변혁을 선언했습니다. 낡은 질서가 붕괴하기 직전인 지금, '새로운 영혼'들은 세계를 뒤엎을 기로에 서 있습니다...\n\n§B해당 국가를 선택하면 $USA_social_liberal$으로 변경됩니다.§!"
  meowl_focus: "새로운 영혼 중점 트리"
 
@@ -80,7 +80,7 @@
  MEO_pacific_first: "태평양을 향해"
  MEO_pacific_first_desc: ""
  MEO_over_the_continent: "대륙을 넘어 대서양으로"
- MEO_over_the_continen_desc: ""
+ MEO_over_the_continent_desc: ""
  MEO_destroyer_production: "바다의 수호자"
  MEO_destroyer_production_desc: ""
  MEO_research_submarine: "잠수함 우선"
@@ -158,14 +158,14 @@
  
 ### Tooltips ###
  tooltip_no_meowl: "이 선택지를 고르면 먀울과 관련된 이벤트 체인은 더 이상 발동하지 않습니다."
- feature_highlight_icon_meowl_tt: "§Y먀울 콘텐츠!!!!!!!!!!!!!!!!!!!!!§!\n미국 내전에서\n§1개§!§2쩌§!§3는§!§4먀§!§5울§!§6등§!§7장§!"
+ feature_highlight_icon_meowl_tt: "§Y미국 내전 신규 콘텐츠§!\n £white_dot 플레이 가능한 §Y새로운 영혼§! 경로\n      - §G높은 성의 먀울§!\n      - §g먀울에 맞선 캐빗§!"
  meowl_transformation_tooltip: "§Y$CHARACTER$§!(은)는 먀울화 되어 §Y$AFTER$§! 측으로 알려지게 됩니다."
 
 
 ### Others ###
 ## Flags ##
  USA_MEO_existed: "먀울이 봉기함"
- MEO_defend_success_flag: "침공에 맞서 방어에 성공함"
+ MEO_defend_success_flag: "방어에 성공함"
 
 ### BOP ###
  MEO_power_balance: "먀울-캐빗 관계도"
