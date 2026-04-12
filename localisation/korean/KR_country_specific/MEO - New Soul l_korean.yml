@@ -1,4 +1,4 @@
-l_korean:
+﻿l_korean:
  MEO_KR_gathering_storm_desc: "1936년, 대공황과 정치적 분열이 미국을 벼랑 끝으로 내몰았습니다. 기존 권력이 흔들리고 내전의 전운이 감도는 사이, 시애틀의 안개 속에서 수수께끼의 지도자 '먀울'이 등장했습니다. 그는 현존하는 모든 문명을 실패한 '오래된 영혼'으로 규정하고 인류의 완전한 변혁을 선언했습니다. 낡은 질서가 붕괴하기 직전인 지금, '새로운 영혼'들은 세계를 뒤엎을 기로에 서 있습니다...\n\n§B해당 국가를 선택하면 $USA_social_liberal$으로 변경됩니다.§!"
  meowl_focus: "새로운 영혼 중점 트리"
 
@@ -154,7 +154,7 @@ l_korean:
  capitulation_events_meowl.1.t: "서부 확보"
  capitulation_events_meowl.1.d: "뉴소울미국서부확보함"
  capitulation_events_meowl.1.a: "만세!"
- capitulation_events_meowl.1.b: "않돼!"
+ capitulation_events_meowl.1.b: ""
  
 ### Tooltips ###
  tooltip_no_meowl: "이 선택지를 고르면 먀울과 관련된 이벤트 체인은 더 이상 발동하지 않습니다."
