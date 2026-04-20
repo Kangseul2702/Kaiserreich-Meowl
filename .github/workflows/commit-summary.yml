@@ -19,7 +19,7 @@ jobs:
         env:
           VERIFY_URL: https://discord-meowl-cabbit-production.up.railway.app/github/webhook/verify
           VERIFY_AUDIENCE: discord-meowl-cabbit-commit-summary
-          REGISTRATION_ID: csr_29b77e915ec2
+          REGISTRATION_ID: csr_8754ac3e4886
           WEBHOOK_TOKEN: ${{ secrets.COMMIT_SUMMARY_WEBHOOK_TOKEN }}
         run: |
           test -n "$ACTIONS_ID_TOKEN_REQUEST_URL" || (echo "missing ACTIONS_ID_TOKEN_REQUEST_URL" && exit 1)
