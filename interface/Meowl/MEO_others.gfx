@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_specfic_mechanic_icon_kr"
+		textureFile = "gfx/interface/specifc_mechanic_icon_kr.png"
+	}
+}
