@@ -2,21 +2,22 @@ ACW_release_MEO = {
 	set_global_flag = USA_MEO_existed
 	effect_tooltip = { release = MEO }
 	hidden_effect = {
-		MEO = {
-			add_state_core = 386
-		}
+		MEO = { add_state_core = 386 }
 
-		every_owned_state = {
-			limit = { is_core_of = MEO }
-			transfer_state_to = MEO
-			teleport_armies = {
-				limit = { 
-					NOT = { original_tag = MEO }
-					is_american_tag = yes
+		event_target:acw_country = {
+			every_owned_state = {
+				limit = { is_core_of = MEO }
+				transfer_state_to = MEO
+				teleport_armies = {
+					limit = {
+						NOT = { original_tag = MEO }
+						is_american_tag = yes
+					}
+					to_state_array = owned_controlled_states
 				}
-				to_state_array = owned_controlled_states
-			}
+			}	
 		}
+		
 
 		MEO = {
 			every_owned_state = {
@@ -30,7 +31,6 @@ ACW_release_MEO = {
 			add_to_coalition = yes
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
-
 
 			## Airforces (WIP)
 			# if = {
@@ -71,7 +71,6 @@ ACW_release_MEO = {
 		}
 	}
 }
-
 
 MEO_spawn_starting_civil_war_divisions = {
 	create_MEO_militia_template = yes

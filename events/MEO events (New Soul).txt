@@ -62,12 +62,19 @@ country_event = {
 	trigger = {
 		is_american_tag = yes
 		has_global_flag = USA_civil_war_begun_flag
-		owns_state = 386
-		has_war = yes 
-		NOT = { 
-			country_exists = MEO 
+		has_war = yes
+		is_ai = no
+		NOT = {
+			country_exists = MEO
 			has_global_flag = MEO_NoMeowl
 		}
+	}
+
+	immediate = {
+		ACC = { save_event_target_as = acw_country }
+		NEE = { save_event_target_as = acw_country }
+		APG = { save_event_target_as = acw_country }
+		USA = { save_event_target_as = acw_country }
 	}
 
 	fire_only_once = yes
@@ -82,7 +89,7 @@ country_event = {
 		log = "[GetLogInfo]: event meowl_events.3 option meowl_events.3.b"
 		name = meowl_events.3.b
 		ACW_release_MEO = yes
-		MEO = { 
+		MEO = {
 			change_tag_from = ROOT
 			open_intro_screen = yes
 		}
@@ -95,13 +102,13 @@ country_event = {
 	desc = meowl_events.4.d
 	picture = GFX_report_event_Meowl_events_01
 
-	is_triggered_only = yes 
+	is_triggered_only = yes
 
 	option = {
 		log = "[GetLogInfo]: event meowl_events.4 option meowl_events.4.a"
 		name = meowl_events.4.a
-		NKR_navy_advisor = { 
-			set_character_name  = MEO_chief_of_naval_meowl 
+		NKR_navy_advisor = {
+			set_character_name = MEO_chief_of_naval_meowl
 			set_portraits = {
 				civilian = { small = GFX_portrait_MEO_chief_of_naval_meowl_civilian_small }
 			}
@@ -120,7 +127,7 @@ country_event = {
 	desc = meowl_events.5.d
 	picture = GFX_report_event_Meowl_events_01
 
-	is_triggered_only = yes 
+	is_triggered_only = yes
 
 	option = {
 		log = "[GetLogInfo]: event meowl_events.5 option meowl_events.5.a"
@@ -137,7 +144,7 @@ country_event = {
 	desc = meowl_events.7.d
 	picture = GFX_report_event_Meowl_events_01
 
-	is_triggered_only = yes 
+	is_triggered_only = yes
 
 	option = {
 		log = "[GetLogInfo]: event meowl_events.7 option meowl_events.7.a"
@@ -151,7 +158,7 @@ country_event = {
 	desc = meowl_events.8.d
 	picture = GFX_report_event_Meowl_events_01
 
-	is_triggered_only = yes 
+	is_triggered_only = yes
 
 	option = {
 		log = "[GetLogInfo]: event meowl_events.8 option meowl_events.8.a"
@@ -165,7 +172,7 @@ country_event = {
 	desc = meowl_events.9.d
 	picture = GFX_report_event_Meowl_events_01
 
-	is_triggered_only = yes 
+	is_triggered_only = yes
 
 	option = {
 		log = "[GetLogInfo]: event meowl_events.9 option meowl_events.9.a"
