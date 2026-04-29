@@ -19,7 +19,7 @@ focus_tree = {
 
 	default = no
 	continuous_focus_position = { x = 1745 y = 1597 }
-	
+
 	focus = {
 		id = MEO_birth_of_new_soul
 		icon = GFX_focus_MEO_birth_of_new_soul
@@ -38,7 +38,7 @@ focus_tree = {
 			add_political_power = 200
 		}
 	}
-	
+
 	focus = {
 		id = MEO_put_up_barricade
 		icon = GFX_goal_generic_barricades
@@ -90,7 +90,7 @@ focus_tree = {
 			add_equipment_to_stockpile = { type = infantry_equipment amount = 1500 producer = MEO }
 		}
 	}
-	
+
 	focus = {
 		id = MEO_conflict_resolution
 		icon = GFX_focus_MEO_conflict_resolution
@@ -139,7 +139,7 @@ focus_tree = {
 	focus = {
 		id = MEO_meowl_airforce
 		icon = GFX_focus_generic_air_bases
-		prerequisite = { 
+		prerequisite = {
 			focus = MEO_meowlification_army
 		}
 		cost = 3
@@ -164,7 +164,7 @@ focus_tree = {
 	focus = {
 		id = MEO_meowl_navy
 		icon = GFX_focus_generic_refit_civilian_ships
-		prerequisite = { 
+		prerequisite = {
 			focus = MEO_meowlification_army
 		}
 		cost = 3
@@ -186,11 +186,10 @@ focus_tree = {
 		}
 	}
 
-	
 	focus = {
 		id = MEO_from_militia_to_army
 		icon = GFX_goal_mass_concentration_of_army
-		prerequisite = { 
+		prerequisite = {
 			focus = MEO_meowlification_army
 		}
 		cost = 3
@@ -212,11 +211,10 @@ focus_tree = {
 		}
 	}
 
-	
 	focus = {
 		id = MEO_future_decisions
 		icon = GFX_goal_ideology_national_populist_eagle
-		prerequisite = { 
+		prerequisite = {
 			focus = MEO_put_up_barricade
 			focus = MEO_conflict_resolution
 		}
@@ -332,7 +330,7 @@ focus_tree = {
 		icon = GFX_goal_generic_naval_submarine2
 		cost = 1
 
-		prerequisite = { 
+		prerequisite = {
 			focus = MEO_over_the_continent
 			focus = MEO_pacific_first
 		}
@@ -349,9 +347,9 @@ focus_tree = {
 		icon = GFX_goal_nuclear
 		cost = 1
 
-		prerequisite = { 
+		prerequisite = {
 			focus = MEO_biological_superiority
-			focus = MEO_the_superiority_of_will 
+			focus = MEO_the_superiority_of_will
 		}
 		relative_position_id = MEO_the_superiority_of_will
 		x = -3
@@ -366,8 +364,8 @@ focus_tree = {
 		icon = GFX_goal_DOM_The_Phoenix
 		cost = 1
 
-		prerequisite = { 
-			focus = MEO_fighter_research 
+		prerequisite = {
+			focus = MEO_fighter_research
 			focus = MEO_little_bomber_research
 		}
 		relative_position_id = MEO_fighter_research
@@ -383,9 +381,9 @@ focus_tree = {
 		icon = GFX_goal_generic_naval_destroyer2
 		cost = 1
 
-		prerequisite = { 
+		prerequisite = {
 			focus = MEO_pacific_first
-			focus = MEO_over_the_continent 
+			focus = MEO_over_the_continent
 		}
 		relative_position_id = MEO_over_the_continent
 		x = -1
@@ -400,9 +398,9 @@ focus_tree = {
 		icon = GFX_goal_generic_industry_reallocation
 		cost = 1
 
-		prerequisite = { 
+		prerequisite = {
 			focus = MEO_little_bomber_research
-			focus = MEO_fighter_research 
+			focus = MEO_fighter_research
 		}
 		relative_position_id = MEO_fighter_research
 		x = 1
@@ -471,9 +469,9 @@ focus_tree = {
 		icon = GFX_goal_generic_army_high_command
 		cost = 1
 
-		prerequisite = { 
-			focus = MEO_research_submarine 
-			focus = MEO_bird_spirit 
+		prerequisite = {
+			focus = MEO_research_submarine
+			focus = MEO_bird_spirit
 		}
 		prerequisite = { focus = MEO_regular_army }
 		relative_position_id = MEO_regular_army
