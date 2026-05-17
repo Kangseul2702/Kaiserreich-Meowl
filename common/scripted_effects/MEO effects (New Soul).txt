@@ -66,7 +66,6 @@ ACW_release_MEO = {
 			delete_unit_template_and_units = { division_template = "Organised Reserve Infantry Division" }
 
 			country_event = { id = meowl_events.1 days = 3 } # Initialization
-			country_event = { id = meowl_events.4 days = 6 } # Transformation
 			country_event = { id = meowl_events.5 days = 30 } # Invasion Coming
 		}
 	}

@@ -18,7 +18,7 @@ focus_tree = {
 	}
 
 	default = no
-	continuous_focus_position = { x = 1745 y = 1597 }
+	continuous_focus_position = { x = 1335 y = 1035 }
 
 	focus = {
 		id = MEO_birth_of_new_soul
@@ -43,7 +43,7 @@ focus_tree = {
 		id = MEO_put_up_barricade
 		icon = GFX_goal_generic_barricades
 		prerequisite = { focus = MEO_birth_of_new_soul }
-		cost = 3
+		cost = 2
 
 		x = -1
 		y = 1
@@ -86,8 +86,7 @@ focus_tree = {
 					}
 				}
 			}
-			add_equipment_to_stockpile = { type = support_equipment amount = 500 producer = MEO }
-			add_equipment_to_stockpile = { type = infantry_equipment amount = 1500 producer = MEO }
+
 		}
 	}
 
@@ -95,7 +94,7 @@ focus_tree = {
 		id = MEO_conflict_resolution
 		icon = GFX_focus_MEO_conflict_resolution
 		prerequisite = { focus = MEO_birth_of_new_soul }
-		cost = 3
+		cost = 2
 
 		x = 1
 		y = 1
@@ -111,7 +110,6 @@ focus_tree = {
 				left_side = MEO_friendly_side
 				right_side = MEO_not_friendly_side
 			}
-
 		}
 	}
 
@@ -214,15 +212,13 @@ focus_tree = {
 	focus = {
 		id = MEO_future_decisions
 		icon = GFX_goal_ideology_national_populist_eagle
-		prerequisite = {
-			focus = MEO_put_up_barricade
-			focus = MEO_conflict_resolution
-		}
-		cost = 3
+		cost = 5
 
-		x = 0
-		y = 2
-		relative_position_id = MEO_birth_of_new_soul
+		prerequisite = { focus = MEO_research_meowlification }
+		prerequisite = { focus = MEO_mobilize_meowlpower }
+		relative_position_id = MEO_mobilize_meowlpower
+		x = -2
+		y = 1
 
 		ai_will_do = { factor = 50 }
 		available = {
@@ -233,7 +229,7 @@ focus_tree = {
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MEO_future_decisions"
-
+			country_event = meowl_events.6
 		}
 	}
 
@@ -249,6 +245,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -264,6 +261,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -278,6 +276,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -292,6 +291,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -307,6 +307,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -322,6 +323,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -339,6 +341,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -356,6 +359,61 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_make_a_nuclear"
+			if = {
+				limit = {
+					NOT = { has_tech = atomic_research }
+					NOT = { is_researching_technology = atomic_research }
+				}
+				add_tech_bonus = {
+					name = MEO_nuclear_research
+					bonus = 1
+					uses = 1
+					technology = atomic_research
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					controls_province = 7386
+					386 = { #Baden
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = nuclear_facility
+					}
+				}
+				386 = { #Baden
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = nuclear_facility
+							level = 1
+							province = 7386
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_victory_point
+							BUILDING = nuclear_facility
+							NUMBER = 1
+							VP = 7386
+						}
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 386 60 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = nuclear_facility
+					}
+					construct_building_in_random_province = { nuclear_facility = 1 }
+				}
+			}
 		}
 	}
 
@@ -373,6 +431,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -390,6 +449,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -407,6 +467,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -426,6 +487,7 @@ focus_tree = {
 		y = 2
 
 		completion_reward = {
+
 		}
 	}
 
@@ -445,6 +507,7 @@ focus_tree = {
 		y = 2
 
 		completion_reward = {
+
 		}
 	}
 
@@ -461,6 +524,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
@@ -479,36 +543,154 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
 	focus = {
 		id = MEO_meowl_in_the_high_castle
 		icon = GFX_focus_MEO_meowl_in_the_high_castle
-		cost = 1
+		cost = 0
 
 		prerequisite = { focus = MEO_future_decisions }
 		mutually_exclusive = { focus = MEO_cabbit_propaganda }
+		available = {
+			always = no
+		}
 		relative_position_id = MEO_future_decisions
 		x = -4
 		y = 1
 
 		completion_reward = {
+
 		}
 	}
 
 	focus = {
 		id = MEO_cabbit_propaganda
 		icon = GFX_focus_MEO_cabbit_confront_meowl
-		cost = 1
+		cost = 0
 
 		prerequisite = { focus = MEO_future_decisions }
 		mutually_exclusive = { focus = MEO_meowl_in_the_high_castle }
+		available = {
+			always = no
+		}
 		relative_position_id = MEO_future_decisions
 		x = 4
 		y = 1
 
 		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_FOCUS_ID
+		icon = GFX
+		cost = 1
+
+		prerequisite = {
+			focus = MEO_meowl_in_the_high_castle
+			focus = MEO_cabbit_propaganda
+		}
+		relative_position_id = MEO_meowl_in_the_high_castle
+		x = 4
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_FOCUS_ID_2
+		icon = GFX
+		cost = 1
+
+		prerequisite = { focus = MEO_cabbit_propaganda }
+		relative_position_id = MEO_cabbit_propaganda
+		x = -1
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_FOCUS_ID_3
+		icon = GFX
+		cost = 1
+
+		prerequisite = { focus = MEO_meowl_in_the_high_castle }
+		relative_position_id = MEO_meowl_in_the_high_castle
+		x = 1
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_preparation_for_invasion
+		icon = GFX_focus_generic_military_equipment
+		cost = 1
+
+		prerequisite = { focus = MEO_put_up_barricade }
+		prerequisite = { focus = MEO_conflict_resolution }
+		bypass = {
+			has_country_flag = MEO_defend_success_flag
+		}
+
+		relative_position_id = MEO_conflict_resolution
+		x = -1
+		y = 1
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_preparation_for_invasion"
+			add_equipment_to_stockpile = { type = support_equipment amount = 500 producer = MEO }
+			add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = MEO }
+		}
+	}
+
+	focus = {
+		id = MEO_research_meowlification
+		icon = GFX_goal_military_research
+		cost = 2
+
+		prerequisite = { focus = MEO_preparation_for_invasion }
+		bypass = {
+			has_country_flag = MEO_defend_success_flag
+		}
+
+		relative_position_id = MEO_preparation_for_invasion
+		x = -2
+		y = 1
+
+		completion_reward = {
+			country_event = meowl_events.4
+		}
+	}
+
+	focus = {
+		id = MEO_mobilize_meowlpower
+		icon = GFX_goal_army_guy_2
+		cost = 2
+
+		prerequisite = { focus = MEO_preparation_for_invasion }
+		relative_position_id = MEO_preparation_for_invasion
+		x = 2
+		y = 1
+
+		bypass = {
+			has_country_flag = MEO_defend_success_flag
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_mobilize_meowlpower"
+			add_manpower = 100000
 		}
 	}
 }

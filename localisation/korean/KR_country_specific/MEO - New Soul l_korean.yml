@@ -9,6 +9,25 @@
 
  MEO_guide: ""
 
+### Country Names ###
+ MEO: "새로운 영혼"
+ MEO_ADJ: "새로운 영혼"
+ MEO_DEF: "새로운 영혼"
+ MEO_totalist: "새로운 영혼"
+ MEO_totalist_DEF: "새로운 영혼"
+ MEO_syndicalist: "새로운 영혼"
+ MEO_syndicalist_DEF: "새로운 영혼"
+ MEO_radical_socialist: "새로운 영혼"
+ MEO_radical_socialist_DEF: "새로운 영혼"
+ MEO_social_democrat: "새로운 영혼"
+ MEO_social_democrat_DEF: "새로운 영혼"
+ MEO_social_liberal: "새로운 영혼"
+ MEO_social_liberal_DEF: "새로운 영혼"
+ MEO_market_liberal: "새로운 영혼"
+ MEO_market_liberal_DEF: "새로운 영혼"
+ MEO_national_populist: "새로운 영혼"
+ MEO_national_populist_DEF: "새로운 영혼"
+
 ### Parties ###
  MEO_totalist_party: "C.A.B.B.I.T"
  MEO_totalist_party_long: "제국주의 폭정을 타파하는 계급 행동국\n(Class Action Bureau Bashing Imperialist Tyranny)"
@@ -107,6 +126,12 @@
  MEO_the_superiority_of_will_desc: ""
  MEO_make_a_nuclear: "궁극의 무기"
  MEO_make_a_nuclear_desc: ""
+ MEO_preparation_for_invasion: "침공 대비"
+ MEO_preparation_for_invasion_desc: ""
+ MEO_research_meowlification: "먀울화 연구"
+ MEO_research_meowlification_desc: ""
+ MEO_mobilize_meowlpower: "먀울 동원"
+ MEO_mobilize_meowlpower_desc: ""
 
 ### National Spirits ###
  MEO_fighting_for_meowl_ns: "먀울을 위해 싸우자!"
@@ -141,6 +166,11 @@
  meowl_events.5.d: "[ACC.GetName]이 우리를 침공할 준비를 하고 있습니다. 그들은 우리를 '반란군'으로 규정하고 진압하려 합니다. 우리는 이 위협에 맞서 싸워야 합니다."
  meowl_events.5.a: "침공을 막아내겠다!"
 
+ meowl_events.6.t: "미래 결정"
+ meowl_events.6.d: "미래를 결정하자!"
+ meowl_events.6.a: "먀울과 함께"
+ meowl_events.6.b: "캐빗과 함께"
+
  meowl_events.7.t: "먀울 민병대 창설"
  meowl_events.7.d: "첫 번째 뉴 소울이 등장하고 대중들은 먀울을 위해 들고 일어나기 시작했습니다. 대공항과 내전이라는 위기에서 염증이 난 대중들은 스스로 무장하고 먀울의 사상에 감화되어 스스로을 전선에 뛰어들기로 했습니다. "
 
@@ -149,12 +179,6 @@
 
  meowl_events.9.t: "동지애로 뭉친 새로운 영혼들"
  meowl_events.9.d: ""
-
-### Capitulation Events ###
- capitulation_events_meowl.1.t: "서부 확보"
- capitulation_events_meowl.1.d: "뉴소울미국서부확보함"
- capitulation_events_meowl.1.a: "만세!"
- capitulation_events_meowl.1.b: ""
  
 ### Tooltips ###
  tooltip_no_meowl: "이 선택지를 고르면 먀울과 관련된 이벤트 체인은 더 이상 발동하지 않습니다."
@@ -178,22 +202,3 @@
  MEO_friendly_side_low: "신뢰함"
  MEO_friendly_side_high: "깊은 유대감"
  MEO_friendly_side_win: "일심동체"
-
-### Country Names ###
- MEO: "새로운 영혼"
- MEO_ADJ: "새로운 영혼"
- MEO_DEF: "새로운 영혼"
- MEO_totalist: "새로운 영혼"
- MEO_totalist_DEF: "새로운 영혼"
- MEO_syndicalist: "새로운 영혼"
- MEO_syndicalist_DEF: "새로운 영혼"
- MEO_radical_socialist: "새로운 영혼"
- MEO_radical_socialist_DEF: "새로운 영혼"
- MEO_social_democrat: "새로운 영혼"
- MEO_social_democrat_DEF: "새로운 영혼"
- MEO_social_liberal: "새로운 영혼"
- MEO_social_liberal_DEF: "새로운 영혼"
- MEO_market_liberal: "새로운 영혼"
- MEO_market_liberal_DEF: "새로운 영혼"
- MEO_national_populist: "새로운 영혼"
- MEO_national_populist_DEF: "새로운 영혼"

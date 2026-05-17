@@ -37,10 +37,19 @@ crisis = {
 			hidden_trigger = { always = no }
 		}
 
+		cancel_trigger = {
+			has_war = no			
+		}
+
+
 		selectable_mission = no
 		is_good = yes
 		days_mission_timeout = 200
 
+		cancel_effect = {
+			set_country_flag = MEO_defend_success_flag
+		}
+		
 		timeout_effect = {
 			log = "[GetLogRoot]: Decision timeout MEO_defend_success"
 			every_country = {
