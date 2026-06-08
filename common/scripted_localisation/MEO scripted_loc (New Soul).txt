@@ -1,0 +1,33 @@
+defined_text = {
+	name = GetStateName_740
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = STATE_740 #Vancouver Island
+	}
+	text = {
+		trigger = {
+			original_tag = MEO
+		}
+		localization_key = STATE_740_MEOWL
+	}
+	text = {
+		localization_key = STATE_740 #Vancouver Island
+	}
+}
+
+defined_text = {
+	name = GetVictoryPointName_7259
+	text = {
+		trigger = { NOT = { has_global_flag = allowrenaming_flag } }
+		localization_key = VICTORY_POINTS_7259 #Victoria
+	}
+	text = {
+		trigger = {
+			original_tag = MEO
+		}
+		localization_key = VICTORY_POINTS_7259_MEOWL
+	}
+	text = {
+		localization_key = VICTORY_POINTS_7259 #Victoria
+	}
+}

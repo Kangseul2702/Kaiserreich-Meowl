@@ -1,16 +1,13 @@
-capital = 386
+capital = 740
 set_research_slots = 4
 set_convoys = 300
 set_stability = 0.5
 set_war_support = 0.5
 
 USA_starting_techs = yes
-USA_starting_tank_variants = yes
-USA_starting_naval_variants = yes
-USA_starting_plane_variants = yes
 
 set_politics = {
-	ruling_party = national_populist
+	ruling_party = authoritarian_democrat
 	last_election = "1936.11.05"
 	election_frequency = 48
 	elections_allowed = yes
@@ -24,9 +21,9 @@ set_popularities = {
 	social_liberal = 5
 	market_liberal = 6
 	social_conservative = 1
-	authoritarian_democrat = 6
+	authoritarian_democrat = 35
 	paternal_autocrat = 10
-	national_populist = 35
+	national_populist = 6
 }
 
 add_ai_strategy = {
@@ -65,6 +62,18 @@ create_country_leader = {
 	name = USA_donald_trump
 	picture = "gfx/leaders/MEO/USA_donald_trump.png"
 	ideology = market_liberal_subtype
+}
+
+IMP = {
+	give_guarantee = MEO
+	diplomatic_relation = {
+		country = MEO
+		relation = non_aggression_pact
+	}
+	diplomatic_relation = {
+		country = MEO
+		relation = military_access
+	}
 }
 
 ## 지도자 ##

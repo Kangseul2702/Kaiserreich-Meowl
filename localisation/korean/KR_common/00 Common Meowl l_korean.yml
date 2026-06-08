@@ -1,0 +1,8 @@
+﻿l_korean:
+ STATE_740: "벤쿠버 섬"
+ STATE_740_RENAME: "[THIS.Controller.GetStateName_740]"
+ STATE_740_MEOWL: "생태보호구역"
+
+ VICTORY_POINTS_7259: "빅토리아"
+ VICTORY_POINTS_7259_RENAME: "[PREV.Controller.GetVictoryPointName_7259]"
+ VICTORY_POINTS_7259_MEOWL: "캣 시티"
