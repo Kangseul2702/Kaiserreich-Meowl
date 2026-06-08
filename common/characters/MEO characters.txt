@@ -35,16 +35,19 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = MEO_angry_meowl_advisor
+			desc = MEO_angry_meowl_desc
 			traits = { KR_flamboyant_brute KR_war_propagandist }
 		}
 		advisor = {
 			slot = army_chief
 			idea_token = MEO_angry_meowl_army_chief
+			desc = MEO_angry_meowl_desc
 			traits = { KR_army_chief_offensive_1 }
 			cost = 50
 		}
 		field_marshal = {
 			traits = { harsh_leader offensive_doctrine }
+			desc = MEO_angry_meowl_desc
 			skill = 2
 			attack_skill = 2
 			defense_skill = 1
@@ -106,7 +109,7 @@ characters = {
 		advisor = {
 			slot = army_chief
 			idea_token = MEO_businessman_meowl_army_chief
-			traits = { KR_army_chief_reform_2 }
+			traits = { KR_army_chief_old_guard }
 			cost = 100
 		}
 	}
@@ -203,12 +206,14 @@ characters = {
 		advisor = {
 			slot = theorist
 			idea_token = MEO_french_army_meowl_theorist
+			desc = MEO_french_army_meowl_desc
 			ledger = army
 			traits = { KR_superior_firepower_expert KR_council_of_theorists }
 			cost = 150
 		}
 		corps_commander = {
 			traits = { career_officer brilliant_strategist infantry_officer infantry_leader }
+			desc = MEO_french_army_meowl_desc
 			skill = 3
 			attack_skill = 2
 			defense_skill = 2
@@ -259,6 +264,7 @@ characters = {
 		advisor = {
 			slot = second_in_command
 			idea_token = MEO_strawberry_elephant_sic
+			desc = MEO_strawberry_elephant_desc
 			traits = { KR_pragmatic_intriguer_sic }
 			cost = 0
 			can_be_fired = no
