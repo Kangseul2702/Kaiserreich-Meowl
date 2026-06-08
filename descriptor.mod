@@ -12,4 +12,4 @@ tags = {
 }
 picture = "MEOWL.jpg"
 version = "1.6.3"
-supported_version = "1.18.1.*"
+supported_version = "1.18.3.*"
