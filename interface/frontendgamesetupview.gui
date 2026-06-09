@@ -934,7 +934,7 @@ guiTypes = {
 
 			iconType = {
 				name = feature_highlight_icon_1
-				quadTextureSprite = "GFX_idea_RAJ_federal_court_of_india"
+				quadTextureSprite = "GFX_focus_MEO_birth_of_new_soul"
 				position = { x = 84  y = 52 }
 				centerPosition = yes
 				pdx_tooltip = feature_highlight_icon_meowl_tt
