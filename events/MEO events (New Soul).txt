@@ -73,6 +73,7 @@ country_event = {
 		ACC = { save_event_target_as = acw_country }
 		NEE = { save_event_target_as = acw_country }
 		APG = { save_event_target_as = acw_country }
+		WCA = { save_event_target_as = acw_country }
 		USA = { save_event_target_as = acw_country }
 	}
 
@@ -82,16 +83,6 @@ country_event = {
 		log = "[GetLogInfo]: event meowl_events.3 option meowl_events.3.a"
 		name = meowl_events.3.a
 		ACW_release_MEO = yes
-	}
-
-	option = {
-		log = "[GetLogInfo]: event meowl_events.3 option meowl_events.3.b"
-		name = meowl_events.3.b
-		ACW_release_MEO = yes
-		MEO = {
-			change_tag_from = ROOT
-			open_intro_screen = yes
-		}
 	}
 }
 

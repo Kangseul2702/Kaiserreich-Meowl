@@ -25,8 +25,8 @@ focus_tree = {
 		icon = GFX_focus_MEO_birth_of_new_soul
 		cost = 3
 
-		x = 7
-		y = 0
+		x = 2
+		y = 2
 
 		ai_will_do = { factor = 50 }
 		available = {
@@ -206,30 +206,6 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
-		}
-	}
-
-	focus = {
-		id = MEO_future_decisions
-		icon = GFX_goal_ideology_national_populist_eagle
-		cost = 5
-
-		prerequisite = { focus = MEO_research_meowlification }
-		prerequisite = { focus = MEO_mobilize_meowlpower }
-		relative_position_id = MEO_mobilize_meowlpower
-		x = -2
-		y = 1
-
-		ai_will_do = { factor = 50 }
-		available = {
-			has_global_flag = USA_civil_war_begun_flag
-			has_country_flag = MEO_defend_success_flag
-			has_war = no
-		}
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed MEO_future_decisions"
-			country_event = meowl_events.6
 		}
 	}
 
@@ -586,54 +562,6 @@ focus_tree = {
 	}
 
 	focus = {
-		id = MEO_FOCUS_ID
-		icon = GFX
-		cost = 1
-
-		prerequisite = {
-			focus = MEO_meowl_in_the_high_castle
-			focus = MEO_cabbit_propaganda
-		}
-		relative_position_id = MEO_meowl_in_the_high_castle
-		x = 4
-		y = 1
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = MEO_FOCUS_ID_2
-		icon = GFX
-		cost = 1
-
-		prerequisite = { focus = MEO_cabbit_propaganda }
-		relative_position_id = MEO_cabbit_propaganda
-		x = -1
-		y = 1
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = MEO_FOCUS_ID_3
-		icon = GFX
-		cost = 1
-
-		prerequisite = { focus = MEO_meowl_in_the_high_castle }
-		relative_position_id = MEO_meowl_in_the_high_castle
-		x = 1
-		y = 1
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
 		id = MEO_preparation_for_invasion
 		icon = GFX_focus_generic_military_equipment
 		cost = 1
@@ -691,6 +619,167 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MEO_mobilize_meowlpower"
 			add_manpower = 100000
+		}
+	}
+
+	focus = {
+		id = MEO_future_decisions
+		icon = GFX_goal_ideology_national_populist_eagle
+		cost = 5
+
+		prerequisite = { focus = MEO_research_meowlification }
+		prerequisite = { focus = MEO_mobilize_meowlpower }
+		relative_position_id = MEO_mobilize_meowlpower
+		x = -2
+		y = 1
+
+		ai_will_do = { factor = 50 }
+		available = {
+			has_global_flag = USA_civil_war_begun_flag
+			has_country_flag = MEO_defend_success_flag
+			has_war = no
+		}
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_future_decisions"
+			country_event = meowl_events.6
+		}
+	}
+
+	focus = {
+		id = MEO_legacy_new_soul_canada_pact
+		icon = GFX_goal_trees
+		cost = 1
+
+		x = 10
+		y = 0
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = MEO_organize_first_provisional_parliament
+		icon = GFX_goal_generic_parliament
+		cost = 1
+
+		prerequisite = { focus = MEO_legacy_new_soul_canada_pact }
+		relative_position_id = MEO_legacy_new_soul_canada_pact
+		x = -2
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_organize_police
+		icon = GFX_goal_secret_police
+		cost = 1
+
+		prerequisite = { focus = MEO_legacy_new_soul_canada_pact }
+		relative_position_id = MEO_legacy_new_soul_canada_pact
+		x = 2
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	
+	focus = {
+		id = MEO_means_of_appeasement
+		icon = GFX_goal_USA_reconcile_canada
+		cost = 1
+
+		prerequisite = { focus = MEO_organize_first_provisional_parliament }
+		prerequisite = { focus = MEO_organize_police }
+		relative_position_id = MEO_organize_police
+		x = -2
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_talk_with_cabbit
+		icon = GFX_goal_new_treaty
+		cost = 1
+
+		prerequisite = { focus = MEO_self_reliant_economy }
+		prerequisite = { focus = MEO_means_of_appeasement }
+		x = 8
+		y = 3
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_contact_international
+		icon = GFX_goal_generic_globe
+		cost = 1
+
+		prerequisite = { focus = MEO_contact_american_compatriots }
+		prerequisite = { focus = MEO_means_of_appeasement }
+		relative_position_id = MEO_organize_police
+		x = 0
+		y = 2
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_prepare_uprising
+		icon = GFX_goal_revolution
+		cost = 1
+
+		prerequisite = { focus = MEO_talk_with_cabbit }
+		prerequisite = { focus = MEO_contact_international }
+		relative_position_id = MEO_organize_police
+		x = -2
+		y = 3
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_contact_american_compatriots
+		icon = GFX_goal_PAL_American_Refugees
+		cost = 1
+
+		prerequisite = { focus = MEO_organize_police }
+		relative_position_id = MEO_organize_police
+		x = 1
+		y = 1
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = MEO_self_reliant_economy
+		icon = GFX_goal_syndicalist_industry
+		cost = 1
+		
+		prerequisite = { focus = MEO_organize_first_provisional_parliament }
+		relative_position_id = MEO_organize_first_provisional_parliament
+		x = -1
+		y = 1
+
+		completion_reward = {
+
 		}
 	}
 }
