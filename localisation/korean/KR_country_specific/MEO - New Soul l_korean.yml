@@ -155,8 +155,10 @@
  MEO_mobilize_meowlpower_desc: ""
 
 ### National Spirits ###
- MEO_fighting_for_meowl_ns: "먀울을 위해 싸우자!"
- MEO_meowl_guard_ns: "먀울 민병대"
+ MEO_fighting_for_meowl: "먀울을 위해 싸우자!"
+ MEO_meowl_guard: "먀울 민병대"
+ MEO_meowl_army_1: "영혼 군대"
+ MEO_meowl_army_2: "영혼 군대"
 
 ### Decisions ###
  MEO_invasion_coming: "침공 임박"

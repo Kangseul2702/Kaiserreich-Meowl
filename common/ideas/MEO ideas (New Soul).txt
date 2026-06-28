@@ -1,6 +1,10 @@
 ideas = {
 	country = {
-		MEO_fighting_for_meowl_ns = {
+		MEO_fighting_for_meowl = {
+			on_add = { log = "[GetLogRoot]: add idea MEO_fighting_for_meowl" }
+			on_remove = { log = "[GetLogRoot]: remove idea MEO_fighting_for_meowl" }
+			name = MEO_fighting_for_meowl
+			picture = RUS_yunarmiya
 			modifier = {
 				war_support_factor = 0.20
 				no_supply_grace = 168
@@ -10,7 +14,11 @@ ideas = {
 				army_core_defence_factor = 0.2
 			}
 		}
-		MEO_meowl_guard_ns = {
+		MEO_meowl_guard = {
+			on_add = { log = "[GetLogRoot]: add idea MEO_meowl_guard" }
+			on_remove = { log = "[GetLogRoot]: remove idea MEO_meowl_guard" }
+			name = MEO_meowl_guard
+			picture = FOP_revolutionary_army
 			modifier = {
 				experience_gain_army = 0.1
 				land_reinforce_rate = 0.03
@@ -18,6 +26,40 @@ ideas = {
 				supply_consumption_factor = -0.05
 				equipment_capture = 0.03
 				conscription = 0.03
+			}
+		}
+		MEO_meowl_army_1 = {
+			on_add = { log = "[GetLogRoot]: add idea MEO_meowl_army_1" }
+			on_remove = { log = "[GetLogRoot]: remove idea MEO_meowl_army_1" }
+			name = MEO_meowl_army_1
+			picture = RUS_general_school
+			modifier = {
+				experience_gain_army = 0.1
+				land_reinforce_rate = 0.03
+				coordination_bonus = 0.05
+				supply_consumption_factor = -0.05
+				equipment_capture = 0.03
+				conscription = 0.03
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				additional_brigade_column_size = 1
+			}
+		}
+		MEO_meowl_army_2 = {
+			on_add = { log = "[GetLogRoot]: add idea MEO_meowl_army_2" }
+			on_remove = { log = "[GetLogRoot]: remove idea MEO_meowl_army_2" }
+			name = MEO_meowl_army_2
+			picture = RUS_general_school
+			modifier = {
+				experience_gain_army = 0.1
+				land_reinforce_rate = 0.03
+				coordination_bonus = 0.05
+				supply_consumption_factor = -0.05
+				equipment_capture = 0.03
+				conscription = 0.03
+				army_armor_attack_factor = 0.1
+				army_armor_defence_factor = 0.1
+				additional_brigade_column_size = 1
 			}
 		}
 	}

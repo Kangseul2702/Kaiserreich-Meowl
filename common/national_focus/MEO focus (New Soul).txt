@@ -25,8 +25,8 @@ focus_tree = {
 		icon = GFX_focus_MEO_birth_of_new_soul
 		cost = 3
 
-		x = 2
-		y = 2
+		x = -1
+		y = 0
 
 		ai_will_do = { factor = 50 }
 		available = {
@@ -50,6 +50,12 @@ focus_tree = {
 		relative_position_id = MEO_birth_of_new_soul
 
 		ai_will_do = { factor = 50 }
+
+		available = {
+			386 = {
+				is_controlled_by = MEO
+			}
+		}
 
 		completion_reward = {
 			log = "[GetLogRoot]: Focus Completed MEO_put_up_barricade"
@@ -206,6 +212,16 @@ focus_tree = {
 				uses = 2
 				category = land_doctrine
 			}
+			if = {
+				limit = { has_idea = MEO_meowl_guard }
+				swap_ideas = {
+					remove_idea = MEO_meowl_guard
+					add_idea = MEO_meowl_army_1
+				}
+			}
+			else = {
+				add_ideas = MEO_meowl_army_1
+			}
 		}
 	}
 
@@ -318,78 +334,6 @@ focus_tree = {
 
 		completion_reward = {
 
-		}
-	}
-
-	focus = {
-		id = MEO_make_a_nuclear
-		icon = GFX_goal_nuclear
-		cost = 1
-
-		prerequisite = {
-			focus = MEO_biological_superiority
-			focus = MEO_the_superiority_of_will
-		}
-		relative_position_id = MEO_the_superiority_of_will
-		x = -3
-		y = 1
-
-		completion_reward = {
-			log = "[GetLogRoot]: Focus Completed MEO_make_a_nuclear"
-			if = {
-				limit = {
-					NOT = { has_tech = atomic_research }
-					NOT = { is_researching_technology = atomic_research }
-				}
-				add_tech_bonus = {
-					name = MEO_nuclear_research
-					bonus = 1
-					uses = 1
-					technology = atomic_research
-				}
-			}
-			else = {
-				add_breakthrough_progress = {
-					specialization = specialization_nuclear
-					value = 0.5
-				}
-			}
-			custom_effect_tooltip = tooltip_white_line
-			if = {
-				limit = {
-					controls_province = 7386
-					386 = { #Baden
-						is_owned_and_controlled_by = ROOT
-						can_construct_building = nuclear_facility
-					}
-				}
-				386 = { #Baden
-					custom_override_tooltip = {
-						add_building_construction = {
-							type = nuclear_facility
-							level = 1
-							province = 7386
-							instant_build = yes
-						}
-						tooltip = {
-							localization_key = tooltip_add_building_on_victory_point
-							BUILDING = nuclear_facility
-							NUMBER = 1
-							VP = 7386
-						}
-					}
-				}
-			}
-			else = {
-				random_owned_controlled_state = {
-					prioritize = { 386 60 }
-					limit = {
-						is_core_of = ROOT
-						can_construct_building = nuclear_facility
-					}
-					construct_building_in_random_province = { nuclear_facility = 1 }
-				}
-			}
 		}
 	}
 
@@ -520,6 +464,79 @@ focus_tree = {
 
 		completion_reward = {
 
+		}
+	}
+
+	
+	focus = {
+		id = MEO_make_a_nuclear
+		icon = GFX_goal_nuclear
+		cost = 1
+
+		prerequisite = {
+			focus = MEO_biological_superiority
+			focus = MEO_the_superiority_of_will
+		}
+		relative_position_id = MEO_the_superiority_of_will
+		x = -3
+		y = 1
+
+		completion_reward = {
+			log = "[GetLogRoot]: Focus Completed MEO_make_a_nuclear"
+			if = {
+				limit = {
+					NOT = { has_tech = atomic_research }
+					NOT = { is_researching_technology = atomic_research }
+				}
+				add_tech_bonus = {
+					name = MEO_nuclear_research
+					bonus = 1
+					uses = 1
+					technology = atomic_research
+				}
+			}
+			else = {
+				add_breakthrough_progress = {
+					specialization = specialization_nuclear
+					value = 0.5
+				}
+			}
+			custom_effect_tooltip = tooltip_white_line
+			if = {
+				limit = {
+					controls_province = 7386
+					386 = { #Baden
+						is_owned_and_controlled_by = ROOT
+						can_construct_building = nuclear_facility
+					}
+				}
+				386 = { #Baden
+					custom_override_tooltip = {
+						add_building_construction = {
+							type = nuclear_facility
+							level = 1
+							province = 7386
+							instant_build = yes
+						}
+						tooltip = {
+							localization_key = tooltip_add_building_on_victory_point
+							BUILDING = nuclear_facility
+							NUMBER = 1
+							VP = 7386
+						}
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					prioritize = { 386 60 }
+					limit = {
+						is_core_of = ROOT
+						can_construct_building = nuclear_facility
+					}
+					construct_building_in_random_province = { nuclear_facility = 1 }
+				}
+			}
 		}
 	}
 
@@ -685,7 +702,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
-
+			add_stability = 0.05
 		}
 	}
 
@@ -779,7 +796,29 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
-
+			random_owned_state = {
+				prioritize = { 740 } #Vancouver
+				limit = {
+					is_controlled_by = MEO
+					is_core_of = MEO
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 		}
 	}
 }

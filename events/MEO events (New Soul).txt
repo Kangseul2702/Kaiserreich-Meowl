@@ -16,7 +16,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event meowl_events.1 option meowl_events.1.a"
 		name = meowl_events.1.a
-		add_ideas = MEO_meowl_guard_ns
+		add_ideas = MEO_meowl_guard
 	}
 }
 
@@ -124,7 +124,7 @@ country_event = {
 		name = meowl_events.5.a
 		activate_mission = MEO_invasion_coming
 
-		add_ideas = MEO_fighting_for_meowl_ns
+		add_ideas = MEO_fighting_for_meowl
 	}
 }
 
