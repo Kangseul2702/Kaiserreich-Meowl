@@ -17,7 +17,7 @@ jobs:
 
       - name: Verify repo ownership
         env:
-          VERIFY_URL: https://discord-meowl-cabbit-production.up.railway.app/github/webhook/verify
+          VERIFY_URL: https://new-soul.up.railway.app/github/webhook/verify
           VERIFY_AUDIENCE: discord-meowl-cabbit-commit-summary
           REGISTRATION_ID: csr_8754ac3e4886
           WEBHOOK_TOKEN: ${{ secrets.COMMIT_SUMMARY_WEBHOOK_TOKEN }}
@@ -123,7 +123,7 @@ jobs:
 
       - name: Send commit summary webhook
         env:
-          WEBHOOK_URL: https://discord-meowl-cabbit-production.up.railway.app/github/webhook
+          WEBHOOK_URL: https://new-soul.up.railway.app/github/webhook
           WEBHOOK_TOKEN: ${{ secrets.COMMIT_SUMMARY_WEBHOOK_TOKEN }}
         run: |
           test -n "$WEBHOOK_URL" || (echo "missing WEBHOOK_URL" && exit 1)
