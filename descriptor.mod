@@ -11,5 +11,5 @@ tags = {
 	"Gameplay"
 }
 picture = "MEOWL.jpg"
-version = "1.6.3"
-supported_version = "1.18.3.*"
+version = "1.6.4"
+supported_version = "1.19.*"
