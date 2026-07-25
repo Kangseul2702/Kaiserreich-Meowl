@@ -52,18 +52,6 @@ add_ai_strategy = {
 	value = 1
 }
 
-### 더미 지도자 ###
-create_country_leader = {
-	name = USA_joe_biden
-	picture = "gfx/leaders/MEO/USA_joe_biden.png"
-	ideology = social_liberal_subtype
-}
-create_country_leader = {
-	name = USA_donald_trump
-	picture = "gfx/leaders/MEO/USA_donald_trump.png"
-	ideology = market_liberal_subtype
-}
-
 IMP = {
 	diplomatic_relation = {
 		country = MEO
@@ -89,6 +77,7 @@ recruit_character = MEO_businessman_meowl # 군사 참모도 겸임
 recruit_character = MEO_peasant_meowl
 recruit_character = MEO_doctor_meowl
 recruit_character = MEO_strawberry_elephant
+recruit_character = MEO_mr_chedda
 
 ## 육군 참모 ##
 recruit_character = MEO_viking_meowl # 장군 겸임

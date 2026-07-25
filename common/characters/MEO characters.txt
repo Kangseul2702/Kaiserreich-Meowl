@@ -270,6 +270,31 @@ characters = {
 			can_be_fired = no
 		}
 	}
+	MEO_mr_chedda = {
+		name = MEO_mr_chedda
+		portraits = {
+			civilian = {
+				large = GFX_portrait_MEO_mr_chedda_civilian_large
+				small = GFX_portrait_MEO_mr_chedda_small
+			}
+		}
+		country_leader = {
+			desc = MEO_mr_chedda_leader_desc
+			ideology = social_liberal_subtype
+		}
+		country_leader = {
+			desc = MEO_mr_chedda_leader_desc
+			ideology = market_liberal_subtype
+		}
+		advisor = {
+			slot = second_in_command
+			idea_token = MEO_mr_chedda_sic
+			desc = MEO_mr_chedda_desc
+			traits = { KR_corporate_suit_sic }
+			cost = 0
+			can_be_fired = no
+		}
+	}
 	MEO_headbutt_king = {
 		name = MEO_headbutt_king
 		portraits = {
