@@ -82,7 +82,7 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event meowl_events.3 option meowl_events.3.a"
 		name = meowl_events.3.a
-		ACW_release_MEO = yes
+		ACW_capture_washington_MEO = yes
 	}
 }
 
@@ -190,6 +190,33 @@ country_event = {
 	option = {
 		log = "[GetLogInfo]: event meowl_events.9 option meowl_events.9.a"
 		name = meowl_events.9.a
+	}
+}
+
+country_event = {
+	id = meowl_events.10
+	title = meowl_events.10.t
+	desc = meowl_events.10.d
+	picture = GFX_report_event_Meowl_events_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = meowl_events.10.a
+		set_country_flag = MEO_congress_enabled
+	}
+}
+
+country_event = {
+	id = meowl_events.11
+	title = meowl_events.11.t
+	desc = meowl_events.11.d
+	picture = GFX_report_event_generic
+
+	is_triggered_only = yes
+
+	option = {
+		name = meowl_events.11.a	
 	}
 }
 

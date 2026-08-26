@@ -1,0 +1,13 @@
+MEO_congress_category = {
+	icon = GFX_decision_category_usa_congress
+
+	allowed = {
+		original_tag = MEO
+	}
+	priority = 150
+
+	visible = {
+		has_country_flag = MEO_congress_enabled
+	}
+	visible_when_empty = yes
+}

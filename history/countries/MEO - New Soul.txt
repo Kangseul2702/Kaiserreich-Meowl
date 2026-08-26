@@ -97,106 +97,11 @@ recruit_character = MEO_general_meowl_4
 
 activate_advisor = MEO_cabbit_sic
 
-### Templates ###
-# division_template = {
-# 	name = "Infantry Division"
-# 	division_names_group = USA_INF_01
-# 	regiments = {
-# 		infantry = { x = 0 y = 0 }
-# 		infantry = { x = 0 y = 1 }
-# 		infantry = { x = 0 y = 2 }
-# 		infantry = { x = 1 y = 0 }
-# 		infantry = { x = 1 y = 1 }
-# 		infantry = { x = 1 y = 2 }
-# 		infantry = { x = 2 y = 0 }
-# 		infantry = { x = 2 y = 1 }
-# 		infantry = { x = 2 y = 2 }
-# 	}
-# 	support = {
-# 		artillery = { x = 0 y = 0 }
-# 		engineer = { x = 0 y = 1 }
-# 	}
-# 	template_counter = 6
-# }
-# division_template = {
-# 	name = "National Guard Infantry Division"
-# 	division_names_group = USA_GAR_01
-# 	regiments = {
-# 		infantry = { x = 0 y = 0 }
-# 		infantry = { x = 0 y = 1 }
-# 		infantry = { x = 0 y = 2 }
-# 		infantry = { x = 1 y = 0 }
-# 		infantry = { x = 1 y = 1 }
-# 		infantry = { x = 1 y = 2 }
-# 		infantry = { x = 2 y = 0 }
-# 		infantry = { x = 2 y = 1 }
-# 		infantry = { x = 2 y = 2 }
-# 	}
-# 	support = {
-# 		artillery = { x = 0 y = 0 }
-# 	}
-# 	template_counter = 68
-# }
-# division_template = {
-# 	name = "Cavalry Division"
-# 	division_names_group = USA_CAV_01
-# 	regiments = {
-# 		cavalry = { x = 0 y = 0 }
-# 		cavalry = { x = 0 y = 1 }
-# 		cavalry = { x = 0 y = 2 }
-# 		cavalry = { x = 1 y = 0 }
-# 		cavalry = { x = 1 y = 1 }
-# 		cavalry = { x = 1 y = 2 }
-# 		cavalry = { x = 2 y = 0 }
-# 		cavalry = { x = 2 y = 1 }
-# 		cavalry = { x = 2 y = 2 }
-# 	}
-# 	support = {
-# 		light_tank_recon = { x = 0 y = 0 }
-# 		engineer = { x = 0 y = 1 }
-# 	}
-# }
-# division_template = {
-# 	name = "National Guard Cavalry Division"
-# 	division_names_group = USA_CAV_01
-# 	regiments = {
-# 		cavalry = { x = 0 y = 0 }
-# 		cavalry = { x = 0 y = 1 }
-# 		cavalry = { x = 0 y = 2 }
-# 		cavalry = { x = 0 y = 3 }
-# 		cavalry = { x = 1 y = 0 }
-# 		cavalry = { x = 1 y = 1 }
-# 		cavalry = { x = 1 y = 2 }
-# 		cavalry = { x = 1 y = 3 }
-# 	}
-# }
-# division_template = {
-# 	name = "Armored Cavalry Division"
-# 	division_names_group = USA_ARM_01
-# 	regiments = {
-# 		motorized = { x = 0 y = 0 }
-# 		motorized = { x = 0 y = 1 }
-# 		motorized = { x = 0 y = 2 }
-# 		mot_artillery_brigade = { x = 1 y = 0 }
-# 		mot_artillery_brigade = { x = 1 y = 1 }
-# 		mot_artillery_brigade = { x = 1 y = 2 }
-# 		light_armor = { x = 2 y = 0 }
-# 		light_armor = { x = 2 y = 1 }
-# 		light_armor = { x = 2 y = 2 }
-# 	}
-# 	priority = 2
-# }
-# division_template = {
-# 	name = "Marine Division"
-# 	division_names_group = USA_MAR_01
-# 	regiments = {
-# 		marine = { x = 0 y = 0 }
-# 		marine = { x = 0 y = 1 }
-# 		marine = { x = 0 y = 2 }
-# 		marine = { x = 1 y = 0 }
-# 	}
-# 	support = {
-# 		engineer = { x = 0 y = 0 }
-# 	}
-# 	priority = 2
-# }
+## Congress Variable - Total 335 Seats
+set_variable = { MEO_cabbit_far_left_seats = 11 }
+set_variable = { MEO_cabbit_mainstream_seats = 46 }
+set_variable = { MEO_cabbit_moderate_seats = 28 }
+set_variable = { MEO_chedda_rural_seats = 29 }
+set_variable = { MEO_chedda_city_seats = 32 }
+set_variable = { MEO_meowl_seats = 189 }
+MEO_calculate_coalition_seats = yes

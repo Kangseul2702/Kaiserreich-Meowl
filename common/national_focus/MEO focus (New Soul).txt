@@ -673,6 +673,7 @@ focus_tree = {
 
 		completion_reward = {
 			add_political_power = 100
+			country_event = { id = meowl_events.11 hours = 7 }
 		}
 	}
 
@@ -687,7 +688,7 @@ focus_tree = {
 		y = 1
 
 		completion_reward = {
-
+			country_event = { id = meowl_events.10 hours = 7 }
 		}
 	}
 

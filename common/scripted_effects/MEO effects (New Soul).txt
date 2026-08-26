@@ -1,4 +1,4 @@
-ACW_release_MEO = {
+ACW_capture_washington_MEO = {
 	set_global_flag = USA_MEO_existed
 	effect_tooltip = { release = MEO }
 	hidden_effect = {
@@ -31,15 +31,6 @@ ACW_release_MEO = {
 			add_to_coalition = yes
 			set_temp_variable = { coalition_partner_var = token:paternal_autocrat }
 			add_to_coalition = yes
-
-			## Airforces (WIP)
-			# if = {
-			# 	limit = { has_dlc_bba = yes }
-			# 	load_oob = ACW_WCA_air_bba
-			# }
-			# else = {
-			# 	load_oob = ACW_WCA_air_legacy
-			# }
 
 			delete_unit = { id = 1776 }
 
@@ -152,6 +143,22 @@ create_MEO_mounted_militia_template = {
 				cavalry = { x = 1 y = 1 }
 				cavalry = { x = 1 y = 2 }
 			}
+		}
+	}
+}
+
+MEO_calculate_coalition_seats = {
+	set_variable = {
+		MEO_cabbit_seats = {
+			value = MEO_cabbit_far_left_seats
+			add = MEO_cabbit_mainstream_seats
+			add = MEO_cabbit_moderate_seats
+		}
+	}
+	set_variable = {
+		MEO_chedda_seats = {
+			value = MEO_chedda_rural_seats
+			add = MEO_chedda_city_seats
 		}
 	}
 }
